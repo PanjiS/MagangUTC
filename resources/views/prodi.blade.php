@@ -45,16 +45,16 @@
             <div class="panel-heading active" role="tab" id="headingOne">
               <h4 class="panel-title">
                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
-                  Program Studi                                        
-                  <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+                  Program Studi                                         
+                <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
               </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
               <div class="panel-body">
                 <ul>
-                    <li><a href="#">Pendidikan Bahasa Inggris</a></li>
                     <li><a href="#">Teknik Sipil</a></li>
-                  
+                    <li><a href="#">Pendidikan Bahasa Inggris</a></li>
+                   
 
                 </ul>
               </div>
@@ -68,6 +68,22 @@
                 <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
               </h4>
             </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+              <div class="panel-body">
+                <ul>
+                    <li><a href="{{ url('/pengelola') }}">Dosen</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+
+    </div>
+</div>
+
+
            
           
 
