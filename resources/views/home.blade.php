@@ -1,6 +1,7 @@
 @extends('layout.navbar')
 
 @section('title','Home')
+
 @section('container')
 <!-- <!DOCTYPE html>
 <html>
@@ -24,7 +25,7 @@
 <body>
 <div class="container"> -->
   
-  	
+
 <div id="demo" class="carousel slide" data-ride="carousel">
 
 <!-- Indicators -->
@@ -66,11 +67,13 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-
+<div id="copyright text-right">© Copyright 2020 Magang TI UMY Melinda Panji Namira</div>
 
   </div>
 </div>
 
+
 @endsection
+
 <!-- </body>
 </html> -->
