@@ -10,7 +10,11 @@ class HomeController extends Controller
         return view ('home');
     }
     
-    public function menu(){
-        return view ('menu');
+    public function pengelola(){
+        return view ('pengelola');
+    }
+
+    public function prodi(){
+        return view ('prodi');
     }
 }

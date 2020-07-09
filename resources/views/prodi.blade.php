@@ -34,8 +34,8 @@
 
 <div class="CaptionContent" style="margin-bottom:10px">
   &nbsp;
-    <a href="#">Penilaian Mata Kuliah</a>
-    <a href="#">Penilaian Dosen</a>
+    <a href="#">Rekap Mata Kuliah</a>
+    <a href="#">Rekap IPK</a>
 </div>
 
 <div class="col-md-3">

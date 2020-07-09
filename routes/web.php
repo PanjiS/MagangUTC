@@ -19,4 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@home');
 Route::get('/home', 'HomeController@home');
-Route::get('/menu', 'HomeController@menu');
+Route::get('/pengelola', 'HomeController@pengelola');
+Route::get('/prodi', 'HomeController@prodi');
