@@ -1,0 +1,354 @@
+*{
+	margin:0 0 0 521;
+	padding:0;
+    }
+
+body{
+	height:100%;
+	width:100%;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 0;
+	font:11px Verdana, Arial, Helvetica, sans-serif;
+	line-height:2em;
+	background:#e8e8ed url(../images/admin/bgbody.jpg) 0 0 repeat-x;
+}
+
+img
+	vertical-align:middle;
+	border:0;
+}
+
+code {
+	font-family:"Courier New", Courier, Fixed;
+}
+
+a{
+	color:#0066ff;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#0066ff;
+	text-decoration:underline;
+}
+
+acronym{
+	cursor:help;
+}
+
+a:hover, 
+a:active, 
+a:focus,a:hover {
+	outline:0;
+}
+
+a,label{
+	cursor:pointer;
+}
+
+p{
+	margin:0 0 8px 0;
+}
+
+ul{
+	margin:0 0 8px 0;
+	list-style-type:none;
+}
+
+ol{
+	margin:0 0 0 2.5em;
+}
+
+ul li{
+	background:url(../images/admin/li.gif) 0 8px no-repeat !important;
+	padding:0 0 0 10px;
+	margin:0 0 0 0;
+}
+
+ul li ul{
+	margin-bottom:0;
+}
+
+ol li{
+	background:none !important;
+	padding:0 !important;
+	margin:0 !important;
+}
+
+
+input, 
+select, 
+textarea{
+	font:normal normal 700 small normal Tahoma, Arial, Helvetica, sans-serif;
+	padding:1px;
+}
+
+address{
+	font-style:normal;
+	margin:0.5em 0;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after{
+	content: "";
+}
+blockquote,
+q{
+	quotes: "" "";
+}
+
+.table{
+	clear:both;
+	width:100%;
+	line-height:15px;
+	border-collapse: collapse;
+	border-bottom:1px solid #bbb;
+	border-left:1px solid #bbb;
+	margin-bottom:5px;
+}
+
+.table tr.alt td{
+	background:#f2f2f2;
+}
+
+.table tr.alt2 td{
+	background:#aaa;
+	color:#fff;
+}
+
+.table tr.alt2 td input{
+	border:1px solid #aaa;
+	color:#fff;
+	padding:2px;
+	color:#000;
+}
+
+.table th, 
+.table td{
+	vertical-align:top;
+	padding:5px;
+	border-top:1px solid #bbb;
+	border-right:1px solid #bbb;
+}
+
+.table th{
+	text-align:center;
+	vertical-align:middle !important;
+	background:#e8e8e8;
+	color:#000;
+}
+
+.table01{
+	border-bottom:none !important;
+	border-left:none !important;
+	width:auto !important;
+}
+
+.table01 td{
+	border-top:none !important;
+	border-right:none !important;
+}
+
+hr {
+	background:#ddd;
+	color:#ddd;
+	clear:both;
+	float:none;
+	width:100%;
+	height:1px;
+	margin:0.25em 0;
+	border:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+	font-size:11px;
+	text-transform:uppercase;
+	clear:both;
+}
+
+h2{
+	padding-bottom:5px;
+	clear:both;
+}
+
+h3{
+	padding-bottom:5px;
+	clear:both;
+	text-transform:none;
+}
+
+/* CSS FOR POSITION NEEDS */
+.left	{	float:left !important;	display:inline !important;	}
+.right	{	float:right !important;	display:inline !important;	}
+.clreol	{	float:none !important; 	clear:both !important;		}
+
+/* CSS FOR TEXT NEEDS */
+.strong	{	font-weight:bold;	}
+.em		{	font-style:italic;	}
+.center	{	text-align:center;	vertical-align:middle;	}
+
+/* CSS FOR COLOR NEEDS */
+.redtext	{	color:#ff0000;	}
+.bluetext	{	color:#3366ff;	}
+.yellowtext	{	color:#ffff00;	}
+.orangetext	{	color:#ff9000;	}
+.greentext	{	color:#339900;	}
+.whitetext	{	color:#ffffff;	}
+.greytext	{	color:#cccccc;	}
+
+/* CSS FOR COLOR FORM */
+.row				{	width:100%;			float:left;				display:inline;	 	clear:both;
+						padding:8px 0;		margin:2px 0;			text-align:left;		border-bottom:1px solid #ccc;	}
+
+.row .rowwrap {
+        width: 24%;
+        float: left;
+}
+
+.row label			{	
+    width:10%;			
+    margin:0 2% 0 0;
+    float:left;	
+}
+.row .rowwrap		{
+    width:24%;			
+    float:left;
+    text-align:left;
+}
+
+.halfrow			{	width:50% !important; clear:none;						}
+.contentrow			{	background:#eee;	border:1px solid #bbb;	padding:1%;			width:98%;		margin:0 0 5px 0 !important;						}
+
+.nomargin			{	margin:0 !important;			}
+.nopadding			{	padding:0 !important;			}
+.nobackground		{	background:none  !important;	}
+.noclear			{	clear:none !important;			}
+
+.rowtype input,
+.rowtype textarea,
+.rowtype select{
+	width:300px !important;
+	padding:2px !important;
+	margin:0 !important;
+}
+
+.shown				{	display:block;	}
+.hidden				{	display:none;	}
+
+input.btn{
+	background:#fff url(../images/admin/bgbtn.gif) repeat-x bottom;
+	border:1px solid #888;
+	color:#666;
+}
+
+a.btn{
+	background:#fff url(../images/admin/bgbtn.gif) repeat-x bottom;
+	border:1px solid #888;
+	color:#666;
+	padding:4px 6px;
+}
+
+span.btn{
+	background:#fff url(../images/admin/bgbtn.gif) repeat-x bottom;
+	border:1px solid #999;
+	color:#999;
+	padding:4px 6px;
+	cursor:defaults;
+}
+
+ul.list1 li{
+	float:left;
+	clear:both;
+	padding:2px 2%;
+	width:96%;
+	background:url(../images/admin/li.gif) 6px 11px no-repeat !important;
+}
+
+ul.list1 li.alt{
+	background:#f0f0f0 url(../images/admin/li.gif) 6px 11px no-repeat !important;
+	clear:both;
+}
+
+/* --------- Modifikasi By Wahyu --------------------- */
+.row-kinerja {
+    width:100%;
+    float:left;
+    display:inline;
+    clear:both;
+	padding:8px 0;
+    margin:2px 0;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+}
+
+.row-kinerja label {
+    width: 600px;
+    margin: 0 2% 0 0;
+    float: left;
+    font-size: 12px;
+}
+
+.row-kinerja-header	{
+    width:100%;
+    float:left;
+    display:inline;
+    clear:both;
+	padding:8px 0;
+    margin:2px 0;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+}
+
+.row-kinerja-header label {
+        width: 588px;
+        margin: 0 2% 0 0;
+        float: left;
+        font-size: 12px;
+        font-weight: bold;
+}
+
+.row-kinerja-mk	{
+    width:100%;
+    float:left;
+    display:inline;
+    clear:both;
+	padding:8px 0;
+    margin:2px 0;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+}
+
+.row-kinerja-mk label {
+    width: 75px;
+    margin: 0 2% 0 0;
+    float: left;
+    font-size: 12px;
+}
+
+.row-kinerja-akademik label {
+    width: 600px;
+    margin: 0 2% 0 0;
+    font-size: 12px;
+}
+
+/* ------------ Akhir Modifikasi ------------------- */
+
+.row-visimisi {
+    width:100%;
+    float:left;
+    display:inline;
+    clear:both;
+	padding:8px 0;
+    margin:2px 0;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+    font-size: 12px;
+}
+    .row-visimisi input {
+        margin-left:15px !important;
+        margin-right:10px !important;
+    }
