@@ -15,6 +15,28 @@
     <title>Document</title>
 </head>
 <body>
+<div id="header" class="header white">
+    <div class="container-fluid">
+        <div class="row">
+               <div class="col-md-12">
+                  <div class="header clearfix">
+                       <div class="logo">
+                           <img src="/img/logo.png" alt="logo" width="250" height="50">
+                       </div>
+                       <div class="title">
+                           ANALISIS PENILAIAN 
+                       </div>
+                   </div>
+               </div>               
+        </div>              
+    </div> 
+</div>
+
+<div class="CaptionContent" style="margin-bottom:10px">
+  &nbsp;
+    <a href="#">Penilaian Mata Kuliah</a>
+    <a href="#">Penilaian Dosen</a>
+</div>
 
 <div class="col-md-3">
 <div class="accordion">                                    
@@ -31,7 +53,7 @@
               <div class="panel-body">
                 <ul>
                     <li><a href="#">Pendidikan Bahasa Inggris</a></li>
-                    <li><a href="#">Sipil</a></li>
+                    <li><a href="#">Teknik Sipil</a></li>
                   
 
                 </ul>
