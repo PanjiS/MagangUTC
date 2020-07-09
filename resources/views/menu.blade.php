@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="/css/frameworkadmin.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/css/panel.css" media="screen">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <title>Document</title>
 </head>
@@ -22,7 +24,7 @@
               <h4 class="panel-title">
                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
                   Program Studi                                        
-                <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
+                  <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
               </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
