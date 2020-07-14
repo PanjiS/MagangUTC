@@ -1,6 +1,6 @@
 @extends('layout.navbar')
 
-@section('title','Home')
+@section('title','Analisis Penilaian')
 
 @section('container')
 <!-- <!DOCTYPE html>
@@ -38,21 +38,21 @@
 <!-- The slideshow -->
 <div class="carousel-inner">
   <div class="carousel-item active">
-    <img src="https://www.umy.ac.id/wp-content/uploads/2020/06/Header-Masker-2020.jpeg" alt="Gambar - 1" width="1280" height="700">
+    <img src="/img/banner2.jpeg" alt="Gambar - 1" width="1280" height="700">
     <div class="carousel-caption">
       <!-- <h3>Slide 1</h3>
       <p>Deskripsi Slide 1</p> -->
     </div>
   </div>
   <div class="carousel-item">
-    <img src="https://www.umy.ac.id/wp-content/uploads/2020/06/6AF2523C-1B1C-4AE4-85A7-16FD7E16E3FB-1350x450.png" alt="Gambar - 2" width="1280" height="700">
+    <img src="/img/banner1.png" alt="Gambar - 2" width="1280" height="700">
     <div class="carousel-caption">
       <!-- <h3>Slide 2</h3>
       <p>Deskripsi Slide 2</p> -->
     </div>
   </div>
   <div class="carousel-item">
-    <img src="https://www.umy.ac.id/wp-content/uploads/2020/03/WhatsApp-Image-2020-03-18-at-1.57.21-PM.jpeg" alt="Gambar - 3" width="1280" height="700">
+    <img src="/img/wallpaper.jpg" alt="Gambar - 3" width="1280" height="700">
     <div class="carousel-caption">
       <!-- <h3>Slide 3</h3>
       <p>Deskripsi Slide 3</p> -->
