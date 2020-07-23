@@ -87,7 +87,7 @@
   
   <table class="table">
 <thead class="thead-white">
-<th scope="co1">#</th>
+<th scope="co1"></th>
 <th scope="co1">Id Prodi</th>
 <th scope="co1">Program Studi</th>
 
