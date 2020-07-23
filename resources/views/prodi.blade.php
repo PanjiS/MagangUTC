@@ -72,6 +72,7 @@
               <div class="panel-body">
                 <ul>
                     <li><a href="{{ url('/pengelola') }}">Dosen</a></li>
+                    <li><a href="{{ url('/pengelolamatkul') }}">Mata Kuliah</a></li>
                   
                 </ul>
               </div>

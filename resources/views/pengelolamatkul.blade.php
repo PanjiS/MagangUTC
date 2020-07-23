@@ -85,16 +85,15 @@
   <table class="table">
 <thead class="thead-white">
 <th scope="co1"></th>
-<th scope="co1">Id Dosen</th>
-<th scope="co1">Nama</th>
+<th scope="co1">Mata Kuliah</th>
 <th scope="co1">Tahun Ajaran</th>
 <th scope="co1">Semester</th>
-<th scope="co1">Mata Kuliah</th>
-<th scope="co1">Status</th>
-<th scope="co1">Mean IPK</th>
-<th scope="co1">n Failed</th>
-<th scope="co1">n borderline</th>
-<th scope="co1">n students</th>
+<th scope="co1">Nilai Minimum</th>
+<th scope="co1">Nilai Maximum</th>
+<th scope="co1">Nilai Tengah (median)</th>
+<th scope="co1">Rata-Rata Nilai (Mean)</th>
+<th scope="co1">Standard Deviat</th>
+<th scope="co1">Average IPK</th>
 </thead>
 
     </div>

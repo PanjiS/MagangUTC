@@ -21,5 +21,6 @@ Route::get('/', 'HomeController@home');
 
 Route::get('/home', 'HomeController@home');
 Route::get('/pengelola', 'HomeController@pengelola');
+Route::get('/pengelolamatkul', 'HomeController@pengelolamatkul');
 Route::get('/prodi', 'HomeController@prodi');
 //Route::get('/prodi', 'MahasiswaController@index');
