@@ -14,7 +14,15 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        //
+        $tbjurusan['jurusan'] = DB::table('master_prodi')->get();
+        if(count($data[0])>0)
+        {
+            return view('pengelola', $tbjurusan);
+        }
+        else
+        {
+            return view('pengelola');
+        }
     }
 
     /**

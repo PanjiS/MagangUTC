@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-    <title>Document</title>
+    <title>Analisis Mata Kuliah</title>
 </head>
 <body>
 <div id="header" class="header white">
@@ -78,9 +78,25 @@
             </div>
           </div>
 
-          
-
+      
     </div>
+</div>
+
+<div class="col-md-9">
+	<div class="content">
+  
+  <table class="table">
+<thead class="thead-white">
+<th scope="co1">#</th>
+<th scope="co1">Id Prodi</th>
+<th scope="co1">Program Studi</th>
+
+</thead>
+
+</table>
+	</div>
+	
+
 </div>
 
 

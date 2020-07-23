@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@home');
+
 Route::get('/home', 'HomeController@home');
 Route::get('/pengelola', 'HomeController@pengelola');
 Route::get('/prodi', 'HomeController@prodi');
+//Route::get('/prodi', 'MahasiswaController@index');
