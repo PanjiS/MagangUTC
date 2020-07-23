@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,8 +72,8 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
               <div class="panel-body">
                 <ul>
-                    <li><a href="{{ url('/pengelola') }}">Dosen</a></li>
-                    <li><a href="{{ url('/pengelolamatkul') }}">Mata Kuliah</a></li>
+                <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
+                    <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
                   
                 </ul>
               </div>
@@ -86,8 +87,8 @@
 <div class="col-md-9">
 	<div class="content">
   
-  <table class="table">
-<thead class="thead-white">
+  <table class="table" id="customers">
+<thead class="thead-white" >
 <th scope="co1"></th>
 <th scope="co1">Id Prodi</th>
 <th scope="co1">Program Studi</th>
