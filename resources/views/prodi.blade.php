@@ -72,33 +72,28 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
               <div class="panel-body">
                 <ul>
-                <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
-                    <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
-                  
+                  <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
+                  <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
                 </ul>
               </div>
             </div>
           </div>
-
-      
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-
-<div class="col-md-9">
-	<div class="content">
-  
-  <table class="table" id="customers">
-<thead class="thead-white" >
-<th scope="co1"></th>
-<th scope="co1">Id Prodi</th>
-<th scope="co1">Program Studi</th>
-
-</thead>
-
-</table>
-	</div>
 	
-
+<div class="col-md-9">
+  <table class="table">
+    <thead class="thead-white">
+      <tr>
+          <th scope="col">Id Prodi</th>
+          <th scope="col">Program Study</th>
+      </tr>
+    </thead>
+    
+  </table>
 </div>
 
 

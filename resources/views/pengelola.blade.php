@@ -78,26 +78,30 @@
               </div>
             </div>
           </div>
-
-          <div class="col-md-9">
-	<div class="content">
-  
-  <table class="table" id="customers">
-<thead class="thead-white">
-<th scope="co1"></th>
-<th scope="co1">Id Dosen</th>
-<th scope="co1">Nama</th>
-<th scope="co1">Tahun Ajaran</th>
-<th scope="co1">Semester</th>
-<th scope="co1">Mata Kuliah</th>
-<th scope="co1">Status</th>
-<th scope="co1">Mean IPK</th>
-<th scope="co1">n Failed</th>
-<th scope="co1">n borderline</th>
-<th scope="co1">n students</th>
-</thead>
-
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<div class="col-md-9">
+  <table class="table">
+    <thead class="thead-white">
+      <tr>
+        <th scope="co1">Id Dosen</th>
+        <th scope="co1">Nama</th>
+        <th scope="co1">Tahun Ajaran</th>
+        <th scope="co1">Semester</th>
+        <th scope="co1">Mata Kuliah</th>
+        <th scope="co1">Status</th>
+        <th scope="co1">Mean IPK</th>
+        <th scope="co1">n Failed</th>
+        <th scope="co1">n borderline</th>
+        <th scope="co1">n students</th>
+      </tr>
+    </thead>
+    
+  </table>
 </div>
 
 

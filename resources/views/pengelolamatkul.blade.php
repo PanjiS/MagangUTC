@@ -78,26 +78,30 @@
               </div>
             </div>
           </div>
-
-          <div class="col-md-9">
-	<div class="content">
-  
-    <table class="table" id="customers">
-<thead class="thead-white">
-<th scope="co1"></th>
-<th scope="co1">Mata Kuliah</th>
-<th scope="co1">Tahun Ajaran</th>
-<th scope="co1">Semester</th>
-<th scope="co1">Nilai Minimum</th>
-<th scope="co1">Nilai Maximum</th>
-<th scope="co1">Nilai Tengah (median)</th>
-<th scope="co1">Rata-Rata Nilai (Mean)</th>
-<th scope="co1">Standard Deviat</th>
-<th scope="co1">Average IPK</th>
-</thead>
-
+        </div>
+      </div>
     </div>
+  </div>
 </div>
+
+<div class="col-md-9">
+  <table class="table">
+    <thead class="thead-white">
+      <tr>
+          <th scope="col">Id MataKuliah</th>
+          <th scope="col">Tahun Ajaran</th>
+          <th scope="col">Nilai Minimum</th>
+          <th scope="col">Nilai Maximum</th>
+          <th scope="col">Nilai Tengah (Mediann)</th>
+          <th scope="col">Nilai Rata-rata (Mean)</th>
+          <th scope="col">Standard Deviasi</th>
+          <th scope="col">Average IPK</th>
+      </tr>
+    </thead>
+    
+  </table>
+</div>
+
 
 
            
