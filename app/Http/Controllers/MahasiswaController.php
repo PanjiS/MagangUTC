@@ -17,7 +17,7 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::all();
         return view('prodi', ['mahasiswas' => $mahasiswa]);
     }
-n
+
     /**
      * Show the form for creating a new resource.
      *
