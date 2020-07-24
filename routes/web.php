@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@home');
-
 Route::get('/home', 'HomeController@home');
+
 Route::get('/pengelola', 'HomeController@pengelola');
 Route::get('/pengelolamatkul', 'HomeController@pengelolamatkul');
-Route::get('/prodi', 'HomeController@prodi');
-//Route::get('/prodi', 'MahasiswaController@index');
+
+Route::get('/prodi', 'MahasiswaController@getdata');
+// Route::get('/prodi', 'MahasiswaController@prodi');

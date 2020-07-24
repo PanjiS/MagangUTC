@@ -12,19 +12,12 @@ class MahasiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getdata()
     {
-        $tbjurusan['jurusan'] = DB::table('master_prodi')->get();
-        if(count($data[0])>0)
-        {
-            return view('pengelola', $tbjurusan);
-        }
-        else
-        {
-            return view('pengelola');
-        }
+        $mahasiswa = Mahasiswa::all();
+        return view('prodi', ['mahasiswas' => $mahasiswa]);
     }
-
+n
     /**
      * Show the form for creating a new resource.
      *

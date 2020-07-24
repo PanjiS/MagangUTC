@@ -88,10 +88,30 @@
   <table class="table">
     <thead class="thead-white">
       <tr>
-          <th scope="col">Id Prodi</th>
-          <th scope="col">Program Study</th>
+          <th scope="col"></th>
+          <th scope="col">Department Id</th>
+          <th scope="col">TermYear Id</th>
+          <th scope="col">Course Id</th>
+          <th scope="col">Class Id</th>
+          <th scope="col">Student Id</th>
+          <th scope="col">Grade</th>
+          <th scope="col">Weight</th>
       </tr>
     </thead>
+    <tbody>
+      @foreach($mahasiswas as $mhs)
+        <tr>
+            <th scope="row">{{$loop->iteration}}</th>
+            <td>{{$mhs->Department_Id}}</td>
+            <td>{{$mhs->TermYear_Id}}</td>
+            <td>{{$mhs->Course_Id}}</td>
+            <td>{{$mhs->Class_Id}}</td>
+            <td>{{$mhs->Student_Id}}</td>
+            <td>{{$mhs->Grade}}</td>
+            <td>{{$mhs->Weight}}</td>
+        </tr>
+      @endforeach
+    </tbody>
     
   </table>
 </div>
