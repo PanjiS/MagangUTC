@@ -13,7 +13,7 @@ body{
 	background:#e8e8ed url(../images/admin/bgbody.jpg) 0 0 repeat-x;
 }
 
-img
+img{
 	vertical-align:middle;
 	border:0;
 }

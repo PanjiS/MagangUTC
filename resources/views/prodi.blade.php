@@ -13,6 +13,38 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <title>Document</title>
+
+    <style type="text/css">
+      *{
+        padding: 0px;
+        margin: 0px;
+
+      }
+
+      .nav{
+        background: #004028;
+        border-bottom: 10px solid #f1cd59;
+        box-shadow: 3px 0px 5px grey;
+        text-align: left;
+        padding: 1px;
+      }
+
+      ul li{
+        display: inline-block;
+        list-style-type: none;
+        padding: 3px 30px;
+        font-size: 18px;
+        color: white;
+        font-family: sans-serif;
+        transition: .5s;
+      }
+
+      ul li:hover{
+        background-color: #f1cd59;
+        font-weight: bold;
+      }
+
+    </style>
 </head>
 <body>
 <div id="header" class="header white">
@@ -32,10 +64,11 @@
     </div> 
 </div>
 
-<div class="CaptionContent" style="margin-bottom:10px">
-  &nbsp;
-    <a href="#">Rekap Mata Kuliah</a>
-    <a href="#">Rekap IPK</a>
+<div class="nav">
+  <ul>
+    <li>Rekap Mata Kuliah</li>
+    <li>Rekap IPK</li>
+  </ul>
 </div>
 
 <div class="col-md-3">
@@ -81,6 +114,7 @@
           
 
     </div>
+   
 </div>
 
 
