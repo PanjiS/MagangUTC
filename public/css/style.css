@@ -479,3 +479,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', end
     }
 }
 @media (min-width: 1200px) { .login-mobile {display:none}}
+
+*{
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.nav{
+  background: #004028;
+  border-bottom: 10px solid #f1cd59;
+  box-shadow: 3px 0px 5px grey;
+  text-align: left;
+  padding: 1px;
+}
+
+ul li{
+  display: inline-block;
+  list-style-type: none;
+  padding: 3px 30px;
+  font-size: 18px;
+  color: white;
+  font-family: sans-serif;
+  transition: .5s;
+}
+
+ul li:hover{
+  background-color: #f1cd59;
+  font-weight: bold;
+}
+

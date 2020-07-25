@@ -15,16 +15,12 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    /*'default' => env('DB_CONNECTION', 'mysql'),*/
 
-    'default' => env('DB_CONNECTION', 'sqlsrv'),
 
-=======
+
     // 'default' => env('DB_CONNECTION', 'mysql'),
 
     'default' => env('DB_CONNECTION', 'sqlsrv'),
->>>>>>> b381ba1eb6e6d7b91a06c880b0a8f07fd9dcd0d7
 
     /*
     |--------------------------------------------------------------------------

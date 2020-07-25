@@ -13,43 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<<<<<<< HEAD
-    <title>Document</title>
-
-    <style type="text/css">
-      *{
-        padding: 0px;
-        margin: 0px;
-
-      }
-
-      .nav{
-        background: #004028;
-        border-bottom: 10px solid #f1cd59;
-        box-shadow: 3px 0px 5px grey;
-        text-align: left;
-        padding: 1px;
-      }
-
-      ul li{
-        display: inline-block;
-        list-style-type: none;
-        padding: 3px 30px;
-        font-size: 18px;
-        color: white;
-        font-family: sans-serif;
-        transition: .5s;
-      }
-
-      ul li:hover{
-        background-color: #f1cd59;
-        font-weight: bold;
-      }
-
-    </style>
-=======
     <title>Analisis Mata Kuliah</title>
->>>>>>> b381ba1eb6e6d7b91a06c880b0a8f07fd9dcd0d7
 </head>
 <body>
 <div id="header" class="header white">
@@ -118,9 +82,6 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-   
-=======
   </div>
 </div>
 	
