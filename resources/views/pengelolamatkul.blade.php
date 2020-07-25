@@ -52,8 +52,8 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
               <div class="panel-body">
                 <ul>
-                    <li><a href="#">Teknik Sipil</a></li>
-                    <li><a href="#">Pendidikan Bahasa Inggris</a></li>
+                    <li><a href="{{ url('/prodi') }}">Teknik Sipil</a></li>
+                    <li><a href="{{ url('/prodi') }}">Pendidikan Bahasa Inggris</a></li>
                    
 
                 </ul>
@@ -85,7 +85,7 @@
 </div>
 
 <div class="col-md-9">
-  <table class="table">
+  <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
           <th scope="col">Id MataKuliah</th>

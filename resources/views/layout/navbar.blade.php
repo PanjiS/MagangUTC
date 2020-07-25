@@ -31,9 +31,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="{{ url('/home') }}">Home</a>
-                <a class="nav-item nav-link" href="{{ url('/prodi') }}">Menu</a>
+                <a class="nav-item nav-link" href="{{ url('/prodi') }}">Analisis Prodi</a>
                 <a class="nav-item nav-link" href="{{ url('/') }}"></a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
             </div>
         </div>
     </div>
