@@ -32,10 +32,11 @@
     </div> 
 </div>
 
-<div class="CaptionContent" style="margin-bottom:10px">
-  &nbsp;
-    <!-- <a href="#">Rekap Mata Kuliah</a>
-    <a href="#">Rekap IPK</a> -->
+<div class="nav">
+  <ul>
+    <li></li>
+    <li></li>
+  </ul>
 </div>
 
 <div class="col-md-3">
