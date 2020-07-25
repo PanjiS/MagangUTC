@@ -13,6 +13,11 @@ class HomeController extends Controller
     public function pengelola(){
         return view ('pengelola');
     }
+     
+    public function pengelolamatkul(){
+        return view ('pengelolamatkul');
+    }
+    
 
     public function prodi(){
         return view ('prodi');

@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,43 +12,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
-<<<<<<< HEAD
-    <title>Document</title>
-
-    <style type="text/css">
-      *{
-        padding: 0px;
-        margin: 0px;
-
-      }
-
-      .nav{
-        background: #004028;
-        border-bottom: 10px solid #f1cd59;
-        box-shadow: 3px 0px 5px grey;
-        text-align: left;
-        padding: 1px;
-      }
-
-      ul li{
-        display: inline-block;
-        list-style-type: none;
-        padding: 3px 30px;
-        font-size: 18px;
-        color: white;
-        font-family: sans-serif;
-        transition: .5s;
-      }
-
-      ul li:hover{
-        background-color: #f1cd59;
-        font-weight: bold;
-      }
-
-    </style>
-=======
-    <title>Analisis Mata Kuliah</title>
->>>>>>> b381ba1eb6e6d7b91a06c880b0a8f07fd9dcd0d7
+    <title>Data Analisis</title>
 </head>
 <body>
 <div id="header" class="header white">
@@ -69,11 +32,10 @@
     </div> 
 </div>
 
-<div class="nav">
-  <ul>
-    <li>Rekap Mata Kuliah</li>
-    <li>Rekap IPK</li>
-  </ul>
+<div class="CaptionContent" style="margin-bottom:10px">
+  &nbsp;
+    <!-- <a href="#">Rekap Mata Kuliah</a>
+    <a href="#">Rekap IPK</a> -->
 </div>
 
 <div class="col-md-3">
@@ -109,8 +71,9 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
               <div class="panel-body">
                 <ul>
-                  <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
-                  <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
+                <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
+                    <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
+                  
                 </ul>
               </div>
             </div>
@@ -118,44 +81,27 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-   
-=======
   </div>
 </div>
-	
+
 <div class="col-md-9">
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
-          <th scope="col"></th>
-          <th scope="col">Department Id</th>
-          <th scope="col">TermYear Id</th>
-          <th scope="col">Course Id</th>
-          <th scope="col">Class Id</th>
-          <th scope="col">Student Id</th>
-          <th scope="col">Grade</th>
-          <th scope="col">Weight</th>
+          <th scope="col">Id MataKuliah</th>
+          <th scope="col">Tahun Ajaran</th>
+          <th scope="col">Nilai Minimum</th>
+          <th scope="col">Nilai Maximum</th>
+          <th scope="col">Nilai Tengah (Mediann)</th>
+          <th scope="col">Nilai Rata-rata (Mean)</th>
+          <th scope="col">Standard Deviasi</th>
+          <th scope="col">Average IPK</th>
       </tr>
     </thead>
-    <tbody>
-      @foreach($mahasiswas as $mhs)
-        <tr>
-            <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$mhs->Department_Id}}</td>
-            <td>{{$mhs->TermYear_Id}}</td>
-            <td>{{$mhs->Course_Id}}</td>
-            <td>{{$mhs->Class_Id}}</td>
-            <td>{{$mhs->Student_Id}}</td>
-            <td>{{$mhs->Grade}}</td>
-            <td>{{$mhs->Weight}}</td>
-        </tr>
-      @endforeach
-    </tbody>
     
   </table>
->>>>>>> b381ba1eb6e6d7b91a06c880b0a8f07fd9dcd0d7
 </div>
+
 
 
            
