@@ -17,6 +17,11 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::all();
         return view('prodi', ['mahasiswas' => $mahasiswa]);
     }
+    public function ipk()
+    {
+        $mahasiswa = Mahasiswa::all();
+        return view('ipkprodi', ['mahasiswas' => $mahasiswa]);
+    }
    
     /**
      * Show the form for creating a new resource.

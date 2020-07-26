@@ -495,7 +495,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', end
   padding: 1px;
 }
 
-ul li{
+ul li {
   display: inline-block;
   list-style-type: none;
   padding: 3px 30px;
@@ -504,9 +504,30 @@ ul li{
   font-family: sans-serif;
   transition: .5s;
 }
+a {
+    display: inline-block;
+    list-style-type: none;
+    padding: 3px 30px;
+    font-size: 18px;
+    color: white;
+    font-family: sans-serif;
+    transition: .5s;
+  }
 
 ul li:hover{
   background-color: #f1cd59;
   font-weight: bold;
 }
 
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

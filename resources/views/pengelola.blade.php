@@ -84,8 +84,24 @@
     </div>
   </div>
 </div>
+<small class="help-block"></small>
+  <label class="col-md-3 control-label">Tahun Akademik</label>
+  <div class="col-md-3">
+  <select class="form-control">
+    <option >2017</option>
+    <option >2018</option>
+</select>
+<small class="help-block"></small>
+</div>
+  <div class="col-md-3"> 
+ 
+    <button type="submit" class="btn btn-flat btn-social btn-dropbox" id="button-reg">
+    <i"></i> pilih</button>
+
+  </div>
 
 <div class="col-md-9">
+
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>

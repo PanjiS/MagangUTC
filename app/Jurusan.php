@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jurusan extends Model
 {
-    protected $tbjurusan = 'master_prodi';
+    protected $table = 'data_nilai';
+    protected $fillable = ['Department_Id','TermYear_Id','Course_Id'];  
 }
