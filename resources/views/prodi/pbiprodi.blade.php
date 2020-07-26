@@ -104,6 +104,49 @@
     <i"></i> pilih</button>
 
   </div>
+  <div class="col-md-9">                  
+                   
+                            <table class="table table-bordered ">
+                                <tbody>
+                                </tr>
+                                <tr>
+                                  
+                                  <td>Min</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>
+
+                                  <td>Max</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>
+                                
+                                </tr>
+                                <tr>
+                                  
+                                <td>Median</td>                            
+                                  <td><span class="badge bg-red">  </span></td>
+                                  <td>Mean</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>
+                                </tr>
+                                <tr>
+                                <td>1st quartil</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>                       
+                                  <td>3rd quartil</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>
+
+                            
+                                </tr>
+                                <tr>
+                               
+
+                                  <td>Standard Deviation</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>
+                                  <td>Average IPK</td>                                  
+                                  <td><span class="badge bg-red">  </span></td>
+                                </tr>
+                               
+                              </tbody>
+                            </table>
+        
+                </div>
+
 <div class="col-md-9">
   <table class="table table-bordered table-hover" id="customers">
     <thead>
