@@ -20,7 +20,7 @@
   </head>
   <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-custom bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="/img/logo.png" class="custom-brand-img" width="250" height="50">
@@ -30,8 +30,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="{{ url('/home') }}">Home</a>
-                <a class="nav-item nav-link" href="{{ url('/prodi/sipilprodi') }}">Analisis Prodi</a>
+                <a class="nav-item nav-link" href="{{ url('/home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url('/prodi/sipilprodi') }}">Analisis Prodi </a>
+                <a class="nav-item nav-link" href="{{ url('/pengelola') }}">Analisis Rekap Penilaian Matkul</a>
                 <a class="nav-item nav-link" href="{{ url('/') }}"></a>
                 <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
             </div>

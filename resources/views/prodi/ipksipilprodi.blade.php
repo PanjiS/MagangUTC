@@ -39,6 +39,7 @@
   <ul>
     <li> <a href="{{ url('/prodi') }}">Rekap Mata Kuliah</a> </li>
     <li > <a href="{{ url('/ipkprodi') }}">Rekap IPK </a> </li>
+    <a href="{{ url('/home') }}">Home</a>    
   </ul>
 </div>
 
@@ -59,6 +60,7 @@
                     <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
                     <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
                    
+                   
 
                 </ul>
               </div>
@@ -68,7 +70,7 @@
             <div class="panel-heading" role="tab" id="headingTwo">
               <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Pengelola
+                Rekap Hasil
                 <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
               </h4>
             </div>

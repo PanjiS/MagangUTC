@@ -34,8 +34,9 @@
 
 <div class="nav">
   <ul>
-    <li></li>
-    <li></li>
+  <small class="help-block"></small>
+  <a href="{{ url('/home') }}">Home</a>    
+  
   </ul>
 </div>
 
@@ -53,8 +54,9 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
               <div class="panel-body">
                 <ul>
-                    <li><a href="{{ url('/prodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
+                <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
+                    <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
+                   
                    
 
                 </ul>
@@ -65,7 +67,7 @@
             <div class="panel-heading" role="tab" id="headingTwo">
               <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Pengelola
+                  Rekap Hasil
                 <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
               </h4>
             </div>
