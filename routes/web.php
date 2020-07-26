@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@home');
 Route::get('/pengelola', 'HomeController@pengelola');
 Route::get('/pengelolamatkul', 'HomeController@pengelolamatkul');
 
-Route::get('/prodi', 'MahasiswaController@getdata');
-Route::get('/pbiprodi', 'MahasiswaController@getdatapbi');
-Route::get('/ipkprodi', 'MahasiswaController@ipk');
+Route::get('/prodi/sipilprodi', 'MahasiswaController@getdata');
+Route::get('/prodi/pbiprodi', 'MahasiswaController@getdatapbi');
+Route::get('/prodi/ipksipilprodi', 'MahasiswaController@ipk');
 // Route::get('/prodi', 'MahasiswaController@prodi');

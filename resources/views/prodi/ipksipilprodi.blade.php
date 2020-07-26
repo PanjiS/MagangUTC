@@ -56,8 +56,8 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
               <div class="panel-body">
                 <ul>
-                    <li><a href="{{ url('/prodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
+                    <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
+                    <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
                    
 
                 </ul>
