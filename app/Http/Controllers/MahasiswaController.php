@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mahasiswa;
+<<<<<<< HEAD
 use DataTables;
+=======
+use DB;
+
+>>>>>>> e67e2d1ebf552c40323402c85d6da1b9712226eb
 class MahasiswaController extends Controller
 {
     /**
@@ -14,7 +19,11 @@ class MahasiswaController extends Controller
      */
     public function getdata()
     {
-        $mahasiswa = Mahasiswa::all();
+        $mahasiswa = DB::table('data_nilai')
+            ->select('Department_Id','TermYear_Id','Course_Id','Class_Id','Student_Id','Grade','Weight')
+            ->where('Department_Id', '=', 11)
+            ->get();
+        // $mahasiswa = Mahasiswa::all();
         return view('prodi', ['mahasiswas' => $mahasiswa]);
     }
     public function ipk()
