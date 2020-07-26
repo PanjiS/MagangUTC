@@ -112,15 +112,15 @@
       
     </thead>
     <tbody>
-      @foreach($mahasiswas as $mhs)
+      
         <tr>
-            <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$mhs->Department_Id}}</td>
-            <td>{{$mhs->TermYear_Id}}</td>
-            <td>{{$mhs->Course_Id}}</td>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
             
         </tr>
-      @endforeach
+   
     </tbody>
     
   </table>

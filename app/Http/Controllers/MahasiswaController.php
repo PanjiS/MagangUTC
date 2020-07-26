@@ -24,7 +24,7 @@ class MahasiswaController extends Controller
             ->where('Department_Id', '=', 11)
             ->get();
         // $mahasiswa = Mahasiswa::all();
-        return view('prodi', ['mahasiswas' => $mahasiswa]);
+        return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa]);
     }
 
     public function getdatapbi()
@@ -34,12 +34,17 @@ class MahasiswaController extends Controller
             ->where('Department_Id', '=', 81)
             ->get();
         // $mahasiswa = Mahasiswa::all();
-        return view('prodi', ['mahasiswas' => $mahasiswa]);
+        return view('prodi/pbiprodi', ['mahasiswas' => $mahasiswa]);
     }
     public function ipk()
     {
         $mahasiswa = Mahasiswa::all();
-        return view('ipkprodi', ['mahasiswas' => $mahasiswa]);
+        return view('prodi/ipksipilprodi', ['mahasiswas' => $mahasiswa]);
+    }
+    public function ipkpbi()
+    {
+        $mahasiswa = Mahasiswa::all();
+        return view('prodi/ipkpbiprodi', ['mahasiswas' => $mahasiswa]);
     }
    
     /**

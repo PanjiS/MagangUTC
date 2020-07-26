@@ -37,8 +37,8 @@
 
 <div class="nav">
   <ul>
-  <li> <a href="{{ url('/prodi') }}">Rekap Mata Kuliah</a> </li>
-    <li > <a href="{{ url('/ipkprodi') }}">Rekap IPK </a> </li>
+  <li> <a href="{{ url('/prodi/pbiprodi') }}">Rekap Mata Kuliah</a> </li>
+    <li > <a href="{{ url('/prodi/ipkpbiprodi') }}">Rekap IPK </a> </li>
   </ul>
 </div>
 

@@ -37,8 +37,8 @@
 
 <div class="nav">
   <ul>
-  <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li>
-    <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li>
+    <li> <a href="{{ url('/prodi/pbiprodi') }}">Rekap Mata Kuliah</a> </li>
+    <li > <a href="{{ url('/ipkpbiprodi') }}">Rekap IPK </a> </li>
   </ul>
 </div>
 
@@ -56,9 +56,8 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
               <div class="panel-body">
                 <ul>
-                <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
+                    <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
                     <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
-                   
                    
 
                 </ul>
@@ -107,28 +106,21 @@
     <thead>
       <tr>
           <th scope="col"></th>
-          <th scope="col">Department Id</th>
-          <th scope="col">TermYear Id</th>
-          <th scope="col">Course Id</th>
-          <th scope="col">Class Id</th>
-          <th scope="col">Student Id</th>
-          <th scope="col">Grade</th>
-          <th scope="col">Weight</th>
-      </tr>
+          <th scope="col">IPK Semester</th>
+          <th scope="col">Times Borderlie</th>
+          <th scope="col">Times E</th>
+      
     </thead>
     <tbody>
-      @foreach($mahasiswas as $mhs)
+    
         <tr>
-            <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$mhs->Department_Id}}</td>
-            <td>{{$mhs->TermYear_Id}}</td>
-            <td>{{$mhs->Course_Id}}</td>
-            <td>{{$mhs->Class_Id}}</td>
-            <td>{{$mhs->Student_Id}}</td>
-            <td>{{$mhs->Grade}}</td>
-            <td>{{$mhs->Weight}}</td>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            
         </tr>
-      @endforeach
+    
     </tbody>
     
   </table>
