@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="/dataTables/datatables.min.css">
+
     <title>Analisis Mata Kuliah</title>
 </head>
 <body>
@@ -86,8 +88,8 @@
 </div>
 	
 <div class="col-md-9">
-  <table class="table" id="customers">
-    <thead class="thead-white">
+  <table class="table table-bordered table-hover" id="customers">
+    <thead>
       <tr>
           <th scope="col"></th>
           <th scope="col">Department Id</th>
@@ -122,7 +124,7 @@
            
           
 
-<script type="text/javascript">
+<script type="text/javascript" >
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-28600692-1']);
         _gaq.push(['_trackPageview']);
@@ -132,8 +134,16 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+  
 </script>
 
+<script type="text/javascript">
+$(document).ready( function () {
+    $('customers').DataTable();
+} );
+</script>
+
+</script>
 <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
 <script type="text/javascript" src="/js/commonui.js"></script>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
@@ -143,7 +153,7 @@
 <script type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="/js/tiny_mce/settings.js"></script>
 
-
+<script src="/dataTables/datatables.min.js"></script>
 <script src="/js/jquery-1.11.3.min.js"></script>
 <script src="/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>

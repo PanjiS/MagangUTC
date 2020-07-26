@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mahasiswa;
-
+use DataTables;
 class MahasiswaController extends Controller
 {
     /**
@@ -17,7 +17,7 @@ class MahasiswaController extends Controller
         $mahasiswa = Mahasiswa::all();
         return view('prodi', ['mahasiswas' => $mahasiswa]);
     }
-
+   
     /**
      * Show the form for creating a new resource.
      *
