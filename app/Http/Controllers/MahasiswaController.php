@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Mahasiswa;
+use DB;
 
 class MahasiswaController extends Controller
 {
@@ -14,7 +15,11 @@ class MahasiswaController extends Controller
      */
     public function getdata()
     {
-        $mahasiswa = Mahasiswa::all();
+        $mahasiswa = DB::table('data_nilai')
+            ->select('Department_Id','TermYear_Id','Course_Id','Class_Id','Student_Id','Grade','Weight')
+            ->where('Department_Id', '=', 11)
+            ->get();
+        // $mahasiswa = Mahasiswa::all();
         return view('prodi', ['mahasiswas' => $mahasiswa]);
     }
 
