@@ -37,7 +37,7 @@
 
 <div class="nav">
   <ul>
-    <li> <a href="{{ url('/prodi') }}">Rekap Mata Kuliah</a> </li>
+  <li> <a href="{{ url('/prodi') }}">Rekap Mata Kuliah</a> </li>
     <li > <a href="{{ url('/ipkprodi') }}">Rekap IPK </a> </li>
   </ul>
 </div>
@@ -57,7 +57,7 @@
               <div class="panel-body">
                 <ul>
                     <li><a href="{{ url('/prodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
+                    <li><a href="{{ url('/prodi') }}">Pendidikan Bahasa Inggris</a></li>
                    
 
                 </ul>
@@ -106,10 +106,14 @@
     <thead>
       <tr>
           <th scope="col"></th>
-          <th scope="col">IPK Semester</th>
-          <th scope="col">Times Borderlie</th>
-          <th scope="col">Times E</th>
-      
+          <th scope="col">Department Id</th>
+          <th scope="col">TermYear Id</th>
+          <th scope="col">Course Id</th>
+          <th scope="col">Class Id</th>
+          <th scope="col">Student Id</th>
+          <th scope="col">Grade</th>
+          <th scope="col">Weight</th>
+      </tr>
     </thead>
     <tbody>
       @foreach($mahasiswas as $mhs)
@@ -118,7 +122,10 @@
             <td>{{$mhs->Department_Id}}</td>
             <td>{{$mhs->TermYear_Id}}</td>
             <td>{{$mhs->Course_Id}}</td>
-            
+            <td>{{$mhs->Class_Id}}</td>
+            <td>{{$mhs->Student_Id}}</td>
+            <td>{{$mhs->Grade}}</td>
+            <td>{{$mhs->Weight}}</td>
         </tr>
       @endforeach
     </tbody>

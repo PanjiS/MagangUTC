@@ -24,6 +24,6 @@ Route::get('/pengelola', 'HomeController@pengelola');
 Route::get('/pengelolamatkul', 'HomeController@pengelolamatkul');
 
 Route::get('/prodi', 'MahasiswaController@getdata');
-
+Route::get('/pbiprodi', 'MahasiswaController@getdatapbi');
 Route::get('/ipkprodi', 'MahasiswaController@ipk');
 // Route::get('/prodi', 'MahasiswaController@prodi');

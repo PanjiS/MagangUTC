@@ -54,7 +54,7 @@
               <div class="panel-body">
                 <ul>
                     <li><a href="{{ url('/prodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/prodi') }}">Pendidikan Bahasa Inggris</a></li>
+                    <li><a href="{{ url('/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
                    
 
                 </ul>
