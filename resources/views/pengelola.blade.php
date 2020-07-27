@@ -126,6 +126,15 @@
 
            
           
+<div class="row">
+      <div class="footer-copy green clearfix">
+        
+              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+         
+           
+       </div>
+    </div>
+          
 
 <script type="text/javascript">
         var _gaq = _gaq || [];
