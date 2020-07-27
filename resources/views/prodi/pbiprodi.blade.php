@@ -90,6 +90,9 @@
   </div>
 </div>
 <small class="help-block"></small>
+<div class="col-md-9">
+<h2 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h2>
+<br>
   <label class="col-md-3 control-label">Tahun Akademik</label>
   <div class="col-md-3">
   <select class="form-control">
@@ -147,7 +150,7 @@
         
                 </div>
 
-<div class="col-md-9">
+
   <table class="table table-bordered table-hover" id="customers">
     <thead>
       <tr>

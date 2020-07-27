@@ -86,7 +86,9 @@
     </div>
   </div>
 </div>
-<small class="help-block"></small>
+<div class="col-md-9">
+<h2 style="text-align:center">Daftar Rekap Dosen Mata Kuliah</h2>
+<br>
   <label class="col-md-3 control-label">Tahun Akademik</label>
   <div class="col-md-3">
   <select class="form-control">
@@ -102,7 +104,6 @@
 
   </div>
 
-<div class="col-md-9">
 
   <table class="table" id="customers">
     <thead class="thead-white">
@@ -141,18 +142,6 @@
 </div>
 
 
-           
-          
-<div class="row">
-      <div class="footer-copy green clearfix">
-        
-              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
-         
-           
-       </div>
-    </div>
-          
-
 <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-28600692-1']);
@@ -181,4 +170,13 @@
 <script src="/js/behavior.js"></script>
 
 </body>
+
+<div class="row">
+      <div class="footer-copy green clearfix">
+        
+              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+         
+           
+       </div>
+    </div>
 </html>

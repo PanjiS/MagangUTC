@@ -38,7 +38,7 @@
 <div class="nav">
   <ul>
   <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li>
-    <li > <a href="{{ url('/ipksipilprodi') }}">Rekap IPK </a> </li>
+    <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li>
     <a href="{{ url('/home') }}">Home</a>       
   </ul>
 </div>
@@ -89,6 +89,9 @@
   </div>
 </div>
 <small class="help-block"></small>
+<div class="col-md-9">
+<h2 style="text-align:center">Rataan Nilai Teknik Sipil</h2>
+<br>
   <label class="col-md-3 control-label">Tahun Akademik</label>
   <div class="col-md-3">
   <select class="form-control">
@@ -103,7 +106,7 @@
     <i"></i> pilih</button>
 
   </div>
-<div class="col-md-9">
+
   <table class="table table-bordered table-hover" id="customers">
     <thead>
       <tr>
