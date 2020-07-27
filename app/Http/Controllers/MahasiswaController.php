@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Pagination\Paginator;
 use App\Mahasiswa;
-
 use DataTables;
-
 use DB;
+
 
 
 class MahasiswaController extends Controller
@@ -22,7 +23,8 @@ class MahasiswaController extends Controller
         $mahasiswa = DB::table('data_nilai')
             ->select('Department_Id','TermYear_Id','Course_Id','Class_Id','Student_Id','Grade','Weight')
             ->where('Department_Id', '=', 11)
-            ->get();
+            ->simplePaginate(10);
+            
         // $mahasiswa = Mahasiswa::all();
         return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa]);
     }
@@ -32,7 +34,7 @@ class MahasiswaController extends Controller
         $mahasiswa = DB::table('data_nilai')
             ->select('Department_Id','TermYear_Id','Course_Id','Class_Id','Student_Id','Grade','Weight')
             ->where('Department_Id', '=', 81)
-            ->get();
+            ->simplePaginate(10);
         // $mahasiswa = Mahasiswa::all();
         return view('prodi/pbiprodi', ['mahasiswas' => $mahasiswa]);
     }

@@ -174,10 +174,15 @@
         </tr>
       @endforeach
     </tbody>
-    
   </table>
+  
+
+  <div class="d-flex justify-content-right">
+  {!! $mahasiswas->links() !!}
+  </div>
 
 </div>
+
 
 
            
