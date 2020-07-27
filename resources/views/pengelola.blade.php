@@ -107,6 +107,7 @@
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
+       <th scope="co1">No</th>
         <th scope="co1">Id Dosen</th>
         <th scope="co1">Nama</th>
         <th scope="co1">Tahun Ajaran</th>
@@ -119,7 +120,23 @@
         <th scope="co1">n students</th>
       </tr>
     </thead>
-    
+    <tbody>
+      @foreach($pengelola as $mhs)
+        <tr>
+            <th scope="row">{{$loop->iteration}}</th>
+            <td>{{$mhs->Lecture_Id}}</td>
+            <td>{{$mhs->Lecture_Name}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+      @endforeach
+    </tbody>
   </table>
 </div>
 
