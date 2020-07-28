@@ -21,9 +21,11 @@ class MahasiswaController extends Controller
     public function getdata()
     {
         $mahasiswa = DB::table('data_nilai')
-            ->select('Department_Id','TermYear_Id','Course_Id','Class_Id','Student_Id','Grade','Weight')
-            ->where('Department_Id', '=', 11)
-            ->simplePaginate(10);
+        ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
+        ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'data_nilai.TermYear_Id', 'data_nilai.Course_Id', 'data_nilai.Grade',
+            'data_hasil_nilai.Status')
+        ->where('data_nilai.Department_Id', '=', 11)
+        ->simplePaginate(10);
             
         // $mahasiswa = Mahasiswa::all();
         return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa]);
@@ -32,9 +34,11 @@ class MahasiswaController extends Controller
     public function getdatapbi()
     {
         $mahasiswa = DB::table('data_nilai')
-            ->select('Department_Id','TermYear_Id','Course_Id','Class_Id','Student_Id','Grade','Weight')
-            ->where('Department_Id', '=', 81)
-            ->simplePaginate(10);
+        ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
+        ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'data_nilai.TermYear_Id', 'data_nilai.Course_Id', 'data_nilai.Grade',
+            'data_hasil_nilai.Status')
+        ->where('data_nilai.Department_Id', '=', 81)
+        ->simplePaginate(10);
         // $mahasiswa = Mahasiswa::all();
         return view('prodi/pbiprodi', ['mahasiswas' => $mahasiswa]);
     }

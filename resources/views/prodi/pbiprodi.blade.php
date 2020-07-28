@@ -151,27 +151,25 @@
   <table class="table table-bordered table-hover" id="customers">
     <thead>
       <tr>
-          <th scope="col"></th>
+      <th scope="col"></th>
           <th scope="col">Department Id</th>
+          <th scope="col">Student Id</th>
           <th scope="col">TermYear Id</th>
           <th scope="col">Course Id</th>
-          <th scope="col">Class Id</th>
-          <th scope="col">Student Id</th>
           <th scope="col">Grade</th>
-          <th scope="col">Weight</th>
+          <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
       @foreach($mahasiswas as $mhs)
         <tr>
-            <th scope="row">{{$loop->iteration}}</th>
+        <th scope="row">{{$loop->iteration}}</th>
             <td>{{$mhs->Department_Id}}</td>
+            <td>{{$mhs->Student_Id}}</td>
             <td>{{$mhs->TermYear_Id}}</td>
             <td>{{$mhs->Course_Id}}</td>
-            <td>{{$mhs->Class_Id}}</td>
-            <td>{{$mhs->Student_Id}}</td>
             <td>{{$mhs->Grade}}</td>
-            <td>{{$mhs->Weight}}</td>
+            <td>{{$mhs->Status}}</td>
         </tr>
       @endforeach
     </tbody>
