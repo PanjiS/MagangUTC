@@ -89,6 +89,12 @@
   </div>
 </div>
 <small class="help-block"></small>
+
+<div class="col-md-9">
+
+<h1 style="text-align:center">Nilai Mata Kuliah Teknik Sipil</h1>
+<br>
+<small class="help-block"></small>
   <label class="col-md-3 control-label">Tahun Akademik</label>
   <div class="col-md-3">
   <select class="form-control">
@@ -103,7 +109,7 @@
     <i"></i> pilih</button>
 
   </div>
-  <div class="col-md-9">                  
+  <div>                  
                    
                             <table class="table table-bordered ">
                                 <tbody>
@@ -146,7 +152,7 @@
         
                 </div>
 
-<div class="col-md-9">
+<div >
   <table class="table table-bordered table-hover" id="customers">
     <thead>
       <tr>
@@ -178,7 +184,7 @@
   <div class="d-flex justify-content-right">
   {!! $mahasiswas->links() !!}
   </div>
-
+</div>
 </div>
 
 

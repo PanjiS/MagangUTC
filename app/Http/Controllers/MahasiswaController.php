@@ -28,7 +28,9 @@ class MahasiswaController extends Controller
         ->simplePaginate(10);
             
         // $mahasiswa = Mahasiswa::all();
-        return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa]);
+        return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa])
+        ->with('listsipil;', $mahasiswa)    
+        ->with('Smtsipil_terpilih','');
     }
 
     public function getdatapbi()

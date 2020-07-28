@@ -82,8 +82,9 @@
     </div>
   </div>
 </div>
-
 <div class="col-md-9">
+<h2 style="text-align:center">Daftar Rekap IPK Mata Kuliah</h2>
+
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
@@ -91,7 +92,7 @@
           <th scope="col">Tahun Ajaran</th>
           <th scope="col">Nilai Minimum</th>
           <th scope="col">Nilai Maximum</th>
-          <th scope="col">Nilai Tengah (Mediann)</th>
+          <th scope="col">Nilai Tengah (Median)</th>
           <th scope="col">Nilai Rata-rata (Mean)</th>
           <th scope="col">Standard Deviasi</th>
           <th scope="col">Average IPK</th>
@@ -99,19 +100,7 @@
     </thead>
     
   </table>
-</div>
-
-
-
-<div class="row">
-      <div class="footer-copy green clearfix">
-        
-              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
-         
-           
-       </div>
-    </div>
-          
+</div>          
            
           
 
@@ -143,4 +132,12 @@
 <script src="/js/behavior.js"></script>
 
 </body>
+<div class="row">
+      <div class="footer-copy green clearfix">
+        
+              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+         
+           
+       </div>
+    </div>
 </html>

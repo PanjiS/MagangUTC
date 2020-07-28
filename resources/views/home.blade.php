@@ -46,11 +46,17 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-<div id="copyright text-right">© Copyright 2020 Magang TI UMY Melinda Panji Namira</div>
+<div id="copyright text-right">
+<div class="footer-copy green clearfix">
+<p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+         
 
+</div>
+</div>
   </div>
 </div>
 
+          
 
 @endsection
 

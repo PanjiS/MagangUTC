@@ -88,12 +88,16 @@
   </div>
 </div>
 <small class="help-block"></small>
+
+<div class="col-md-9">
+<h2 style="text-align:center">Rataan Nilai Pendidikan Bahasa Inggris</h2>
   <label class="col-md-3 control-label">Tahun Akademik</label>
   <div class="col-md-3">
   <select class="form-control">
     <option >2017</option>
     <option >2018</option>
 </select>
+
 <small class="help-block"></small>
 </div>
   <div class="col-md-3"> 
@@ -102,7 +106,7 @@
     <i"></i> pilih</button>
 
   </div>
-<div class="col-md-9">
+
   <table class="table table-bordered table-hover" id="customers">
     <thead>
       <tr>

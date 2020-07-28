@@ -86,7 +86,9 @@
     </div>
   </div>
 </div>
-<small class="help-block"></small>
+<div class="col-md-9">
+<h2 style="text-align:center">Daftar Rekap Dosen Mata Kuliah</h2>
+<br>
   <label class="col-md-3 control-label">Tahun Akademik</label>
   <div class="col-md-3">
   <select class="form-control">
@@ -102,11 +104,11 @@
 
   </div>
 
-<div class="col-md-9">
 
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
+       <th scope="co1">No</th>
         <th scope="co1">Id Dosen</th>
         <th scope="co1">Nama</th>
         <th scope="co1">Tahun Ajaran</th>
@@ -119,22 +121,26 @@
         <th scope="co1">n students</th>
       </tr>
     </thead>
-    
+    <tbody>
+      @foreach($pengelola as $mhs)
+        <tr>
+            <th scope="row">{{$loop->iteration}}</th>
+            <td>{{$mhs->Lecture_Id}}</td>
+            <td>{{$mhs->Lecture_Name}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+      @endforeach
+    </tbody>
   </table>
 </div>
 
-
-           
-          
-<div class="row">
-      <div class="footer-copy green clearfix">
-        
-              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
-         
-           
-       </div>
-    </div>
-          
 
 <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -164,4 +170,13 @@
 <script src="/js/behavior.js"></script>
 
 </body>
+
+<div class="row">
+      <div class="footer-copy green clearfix">
+        
+              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+         
+           
+       </div>
+    </div>
 </html>
