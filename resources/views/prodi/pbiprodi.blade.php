@@ -31,7 +31,6 @@
                        </div>
                    </div>
                </div>     
-                
         </div>              
     </div> 
 </div>
@@ -58,11 +57,8 @@
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
               <div class="panel-body">
                 <ul>
-                <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
-                   
-                   
-
+                  <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
+                  <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
                 </ul>
               </div>
             </div>
@@ -89,6 +85,7 @@
     </div>
   </div>
 </div>
+
 <small class="help-block"></small>
 <div class="col-md-9">
 <h2 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h2>
@@ -100,87 +97,85 @@
     <option >2018</option>
 </select>
 <small class="help-block"></small>
+
 </div>
   <div class="col-md-3"> 
- 
     <button type="submit" class="btn btn-flat btn-social btn-dropbox" id="button-reg">
     <i"></i> pilih</button>
-
   </div>
-  <div class="col-md-9">                  
-                   
-                            <table class="table table-bordered ">
-                                <tbody>
-                                </tr>
-                                <tr>
-                                  
-                                  <td>Min</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>
 
-                                  <td>Max</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>
-                                
-                                </tr>
-                                <tr>
-                                  
-                                <td>Median</td>                            
-                                  <td><span class="badge bg-red">  </span></td>
-                                  <td>Mean</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>
-                                </tr>
-                                <tr>
-                                <td>1st quartil</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>                       
-                                  <td>3rd quartil</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>
+  <div>
+    <table class="table table-bordered ">
+      <tbody>
+        </tr>
+          <tr>
+            <td>Min</td>
+            <td><span class="badge bg-red">  </span></td>
+            <td>Max</td>
+            <td><span class="badge bg-red">  </span></td>
+          </tr>
+          <tr>
+            <td>Median</td>
+            <td><span class="badge bg-red">  </span></td>
+            <td>Mean</td>
+            <td><span class="badge bg-red">  </span></td>
+          </tr>
+          <tr>
+            <td>1st quartil</td>
+            <td><span class="badge bg-red">  </span></td>
+            <td>3rd quartil</td>
+            <td><span class="badge bg-red">  </span></td>
+          </tr>
+          <tr>
+            <td>Standard Deviation</td>
+            <td><span class="badge bg-red">  </span></td>
+            <td>Average IPK</td>
+            <td><span class="badge bg-red">  </span></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 
-                            
-                                </tr>
-                                <tr>
-                               
-
-                                  <td>Standard Deviation</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>
-                                  <td>Average IPK</td>                                  
-                                  <td><span class="badge bg-red">  </span></td>
-                                </tr>
-                               
-                              </tbody>
-                            </table>
-        
-                </div>
-
-
+<div class="table-responsive">
   <table class="table table-bordered table-hover" id="customers">
     <thead>
       <tr>
-      <th scope="col"></th>
-          <th scope="col">Department Id</th>
-          <th scope="col">Student Id</th>
-          <th scope="col">TermYear Id</th>
-          <th scope="col">Course Id</th>
-          <th scope="col">Grade</th>
-          <th scope="col">Status</th>
+          <th scope="col" rowspan='2'></th>
+          @foreach($head as $h)
+          @if(is_array($h))
+          <th scope="col" colspan='3' style='text-align:center'>{{$h[0]}}</th>
+          @else
+          <th scope="col" rowspan='2'>{{$h}}</th>
+          @endif
+         @endforeach
+      </tr>
+      <tr>
+      @foreach($head as $h)
+          @if(is_array($h))
+          <th scope="col">{{$h[1]}}</th>
+          <th scope="col">{{$h[2]}}</th>
+          <th scope="col">{{$h[3]}}</th>
+          
+          @endif
+         @endforeach
       </tr>
     </thead>
     <tbody>
-      @foreach($mahasiswas as $mhs)
+      @foreach($data as $mhs)
         <tr>
-        <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$mhs->Department_Id}}</td>
-            <td>{{$mhs->Student_Id}}</td>
-            <td>{{$mhs->TermYear_Id}}</td>
-            <td>{{$mhs->Course_Id}}</td>
-            <td>{{$mhs->Grade}}</td>
-            <td>{{$mhs->Status}}</td>
+            <th scope="row">{{$loop->iteration}}</th>
+            @foreach($mhs as $mh)
+            <td>{{$mh}}</td>
+            @endforeach
+            
         </tr>
       @endforeach
     </tbody>
-    
   </table>
-  <div class="d-flex justify-content-right">
+</div>
+<div class="d-flex justify-content-right">
   {!! $mahasiswas->links() !!}
-  </div>
+</div>
 </div>
 
 
