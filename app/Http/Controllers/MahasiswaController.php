@@ -25,8 +25,9 @@ class MahasiswaController extends Controller
 
         $mahasiswa = DB::table('data_nilai')
         ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
-        ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'data_nilai.TermYear_Id')
-        ->groupBy('data_nilai.Department_Id', 'data_nilai.Student_Id', 'data_nilai.TermYear_Id')
+        ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
+        ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'master_term_year.TermYear_Name')
+        ->groupBy('data_nilai.Department_Id', 'data_nilai.Student_Id', 'master_term_year.TermYear_Name')
         ->where('data_nilai.Department_Id', '=', 11)
         ->simplePaginate(10);
 
@@ -34,15 +35,16 @@ class MahasiswaController extends Controller
         foreach($mahasiswa as $mhs){
             $data[$i][0]=$mhs->Department_Id;
             $data[$i][1]=$mhs->Student_Id;
-            $data[$i][2]=$mhs->TermYear_Id;
+            $data[$i][2]=$mhs->TermYear_Name;
             $head[0]='Department Id';
             $head[1]='Student Id';
-            $head[2]='TermYear_Id';
+            $head[2]='TermYear Name';
 
             $nilai = DB::table('data_nilai')
             ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
+            ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
             ->select('data_nilai.Course_Id','data_nilai.Weight', 'data_nilai.Grade', 'data_hasil_nilai.Status')
-            ->where([['data_nilai.Department_Id', '=', 11],['data_nilai.Student_Id','=',$mhs->Student_Id],['data_nilai.TermYear_Id',$mhs->TermYear_Id]])
+            ->where([['data_nilai.Department_Id', '=', 11],['data_nilai.Student_Id','=',$mhs->Student_Id],['master_term_year.TermYear_Name',$mhs->TermYear_Name]])
             ->get();
 
             $ii=3;
@@ -74,8 +76,9 @@ class MahasiswaController extends Controller
         $data = [];
         $mahasiswa = DB::table('data_nilai')
         ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
-        ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'data_nilai.TermYear_Id')
-        ->groupBy('data_nilai.Department_Id', 'data_nilai.Student_Id', 'data_nilai.TermYear_Id')
+        ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
+        ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'master_term_year.TermYear_Name')
+        ->groupBy('data_nilai.Department_Id', 'data_nilai.Student_Id', 'master_term_year.TermYear_Name')
         ->where('data_nilai.Department_Id', '=', 81)
         ->simplePaginate(10);
 
@@ -83,15 +86,16 @@ class MahasiswaController extends Controller
         foreach($mahasiswa as $mhs){
             $data[$i][0]=$mhs->Department_Id;
             $data[$i][1]=$mhs->Student_Id;
-            $data[$i][2]=$mhs->TermYear_Id;
+            $data[$i][2]=$mhs->TermYear_Name;
             $head[0]='Department Id';
             $head[1]='Student Id';
-            $head[2]='TermYear_Id';
+            $head[2]='TermYear Name';
 
             $nilai = DB::table('data_nilai')
             ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
+            ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
             ->select('data_nilai.Course_Id','data_nilai.Weight', 'data_nilai.Grade', 'data_hasil_nilai.Status')
-            ->where([['data_nilai.Department_Id', '=', 81],['data_nilai.Student_Id','=',$mhs->Student_Id],['data_nilai.TermYear_Id',$mhs->TermYear_Id]])
+            ->where([['data_nilai.Department_Id', '=', 81],['data_nilai.Student_Id','=',$mhs->Student_Id],['master_term_year.TermYear_Name',$mhs->TermYear_Name]])
             ->get();
 
             $ii=3;
