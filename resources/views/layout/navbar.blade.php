@@ -32,7 +32,7 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="{{ url('/home') }}">Home</a>
                 <a class="nav-item nav-link" href="{{ url('/prodi/sipilprodi') }}">Analisis Prodi </a>
-                <a class="nav-item nav-link" href="{{ url('/pengelola') }}">Analisis Rekap Penilaian Matkul</a>
+                <a class="nav-item nav-link" href="{{ url('/pengelola/pengeloladosen') }}">Analisis Rekap Penilaian Matkul</a>
                 <a class="nav-item nav-link" href="{{ url('/') }}"></a>
                 <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
             </div>
