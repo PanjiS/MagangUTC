@@ -95,11 +95,21 @@
   <br>
   <small class="help-block"></small>
   <label class="col-md-3 control-label">Tahun Akademik</label>
-  <div class="col-md-3">
-    <select class="form-control">
-      <option >2017</option>
-      <option >2018</option>
-    </select>
+  <div class="form-group col-md-3">
+  <select data-column="1" class="form-control input-lg dynamic" data-dependent="state">
+       <option value=""> Pilih Semester</option>
+        <option value="20151"> 2015/1 </option>
+        <option value="20152">2015/2</option>
+        <option value="20161"> 2016/1 </option>
+        <option value="20162"> 2016/2 </option>
+        <option value="20171"> 2017/1</option>
+        <option value="20172"> 2017/2 </option>
+        <option value="20181"> 2018/1 </option>
+        <option value="20182"> 2018/2 </option>
+        <option value="20191"> 2019/1</option>
+        <option value="20192"> 2019/2 </option>
+  </select>
+
     <small class="help-block"></small>
   </div>
   <div class="col-md-3"> 
@@ -201,6 +211,15 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
   
+</script>
+<script>
+    //filter Berdasarkan satuan product
+    $('.filter-satuan').change(function () {
+        table.column( $(this).data('column'))
+        table.column( $(this).data('column'))
+        .search( $(this).val() )
+        .draw();
+    });
 </script>
 
 <script type="text/javascript">

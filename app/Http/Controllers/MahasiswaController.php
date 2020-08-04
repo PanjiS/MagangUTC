@@ -68,6 +68,7 @@ class MahasiswaController extends Controller
         ->with('Smtsipil_terpilih','');
     }
 
+   
     public function getdatapbi()
     {
         $head=[];
