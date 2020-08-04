@@ -119,33 +119,7 @@
 
   <div>
     <table class="table table-bordered ">
-      <tbody>
-        </tr>
-          <tr>
-            <td>Min</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Max</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-          <tr>
-            <td>Median</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Mean</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-          <tr>
-            <td>1st quartil</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>3rd quartil</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-          <tr>
-            <td>Standard Deviation</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Average IPK</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-      </tbody>
+    
     </table>
   </div>
 
@@ -185,6 +159,148 @@
       @endforeach
     </tbody>
   </table>
+  <table class="table" id="customers">
+    <thead class="thead-white">
+      <tr>
+          <th scope="col">Min</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+          <th scope="col">Max</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    
+    <tr>
+          <th scope="col">Median</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    
+    <tr>
+          <th scope="col">Mean</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    
+    <tr>
+          <th scope="col">quartil 1</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+          <th scope="col">quartil 3</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+          <th scope="col">Standar Deviation</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+          <th scope="col">Average IPK</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+      </tr>
+    </tbody>
+  </table>
+  
 </div>
 <div class="d-flex justify-content-right">
   {!! $mahasiswas->links() !!}

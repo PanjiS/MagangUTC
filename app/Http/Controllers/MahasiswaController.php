@@ -27,6 +27,7 @@ class MahasiswaController extends Controller
         ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')
         ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
         ->select('data_nilai.Department_Id', 'data_nilai.Student_Id', 'master_term_year.TermYear_Name')
+        ->orderby('TermYear_Id')
         ->groupBy('data_nilai.Department_Id', 'data_nilai.Student_Id', 'master_term_year.TermYear_Name')
         ->where('data_nilai.Department_Id', '=', 11)
         ->simplePaginate(10);
