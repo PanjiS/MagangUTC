@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@home');
 Route::get('/home', 'HomeController@home');
 
-Route::get('/pengelolamatkul', 'HomeController@pengelolamatkul');
-Route::get('/pengelola', 'PengelolaController@index');
+Route::get('/pengelola/pengeloladosen', 'PengelolaController@getdatarekap_dosen');
+Route::get('/pengelola/pengelolamatkul', 'PengelolaController@getdatarekap_matkul');
 
 Route::get('/prodi/sipilprodi', 'MahasiswaController@getdata');
 Route::get('/prodi/pbiprodi', 'MahasiswaController@getdatapbi');
