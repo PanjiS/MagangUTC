@@ -70,8 +70,8 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
               <div class="panel-body">
                 <ul>
-                <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
-                    <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
+                <li><a href="{{ url('/pengelola/pengeloladosen') }}">Rekap Dosen Mata Kuliah</a></li>
+                    <li><a href="{{ url('/pengelola/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
                   
                 </ul>
               </div>
@@ -88,6 +88,7 @@
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
+          <th scope="col">Department_Id</th>
           <th scope="col">Id MataKuliah</th>
           <th scope="col">Tahun Ajaran</th>
           <th scope="col">Nilai Minimum</th>
@@ -98,6 +99,22 @@
           <th scope="col">Average IPK</th>
       </tr>
     </thead>
+    <tbody>
+      @foreach($pengelola as $png)
+        <tr>
+            <th scope="row">{{$loop->iteration}}</th>
+            <td>{{$png->Department_Id}}</td>
+            <td>{{$png->Course_Id}}</td>
+            <td>{{$png->TermYear_Name}}</td>
+            <td>{{$png->Min}}</td>
+            <td>{{$png->Max}}</td>
+            <td>{{$png->Median}}</td>
+            <td>{{$png->Mean}}</td>
+            <td>{{$png->Standard_Deviation}}</td>
+            <td>{{$png->Average_IPK}}</td>
+        </tr>
+      @endforeach
+    </tbody>
     
   </table>
 </div>          

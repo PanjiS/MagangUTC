@@ -74,8 +74,8 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
               <div class="panel-body">
                 <ul>
-                    <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
-                    <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
+                    <li><a href="{{ url('/pengelola/pengeloladosen') }}">Rekap Dosen Mata Kuliah</a></li>
+                    <li><a href="{{ url('/pengelola/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
                   
                 </ul>
               </div>
@@ -108,11 +108,11 @@
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
-       <th scope="co1">No</th>
+        <th scope="co1">No</th>
+        <th scope="co1">Department Id</th>
         <th scope="co1">Id Dosen</th>
         <th scope="co1">Nama</th>
-        <th scope="co1">Tahun Ajaran</th>
-        <th scope="co1">Semester</th>
+        <th scope="co1">Tahun Ajaran/Semester</th>
         <th scope="co1">Mata Kuliah</th>
         <th scope="co1">Status</th>
         <th scope="co1">Mean IPK</th>
@@ -122,19 +122,19 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($pengelola as $mhs)
+      @foreach($pengelola as $png)
         <tr>
             <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$mhs->Lecture_Id}}</td>
-            <td>{{$mhs->Lecture_Name}}</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{$png->Department_Id}}</td>
+            <td>{{$png->Lecture_Id}}</td>
+            <td>{{$png->Lecture_Name}}</td>
+            <td>{{$png->TermYear_Name}}</td>
+            <td>{{$png->Course_Id}}</td>
+            <td>{{$png->Status}}</td>
+            <td>{{$png->Mean_IPK}}</td>
+            <td>{{$png->nFailed}}</td>
+            <td>{{$png->nBorderline}}</td>
+            <td>{{$png->nStudents}}</td>
         </tr>
       @endforeach
     </tbody>
