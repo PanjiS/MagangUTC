@@ -74,7 +74,7 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
               <div class="panel-body">
                 <ul>
-                  <li><a href="{{ url('/pengelola') }}">Rekap Dosen Mata Kuliah</a></li>
+                  <li><a href="{{ url('/pengeloladosen') }}">Rekap Dosen Mata Kuliah</a></li>
                   <li><a href="{{ url('/pengelolamatkul') }}">Rekap IPK Mata Kuliah</a></li>
                 </ul>
               </div>
