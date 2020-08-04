@@ -108,7 +108,8 @@
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
-       <th scope="co1">No</th>
+        <th scope="co1">No</th>
+        <th scope="co1">Department Id</th>
         <th scope="co1">Id Dosen</th>
         <th scope="co1">Nama</th>
         <th scope="co1">Tahun Ajaran/Semester</th>
@@ -124,6 +125,7 @@
       @foreach($pengelola as $png)
         <tr>
             <th scope="row">{{$loop->iteration}}</th>
+            <td>{{$png->Department_Id}}</td>
             <td>{{$png->Lecture_Id}}</td>
             <td>{{$png->Lecture_Name}}</td>
             <td>{{$png->TermYear_Name}}</td>
