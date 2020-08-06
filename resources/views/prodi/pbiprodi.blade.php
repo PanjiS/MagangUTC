@@ -91,51 +91,34 @@
 <h2 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h2>
 <br>
   <label class="col-md-3 control-label">Tahun Akademik</label>
-  <div class="col-md-3">
-  <select class="form-control">
-    <option >2017</option>
-    <option >2018</option>
-</select>
-<small class="help-block"></small>
+  <div class="form-group col-md-3">
+  <select data-column="1" class="form-control input-lg dynamic" data-dependent="state">
+       <option value=""> Pilih Semester</option>
+        <option value="20151"> 2015/1 </option>
+        <option value="20152">2015/2</option>
+        <option value="20161"> 2016/1 </option>
+        <option value="20162"> 2016/2 </option>
+        <option value="20171"> 2017/1</option>
+        <option value="20172"> 2017/2 </option>
+        <option value="20181"> 2018/1 </option>
+        <option value="20182"> 2018/2 </option>
+        <option value="20191"> 2019/1</option>
+        <option value="20192"> 2019/2 </option>
+  </select>
 
-</div>
+    <small class="help-block"></small>
+  </div>
   <div class="col-md-3"> 
     <button type="submit" class="btn btn-flat btn-social btn-dropbox" id="button-reg">
     <i"></i> pilih</button>
   </div>
 
+  
   <div>
     <table class="table table-bordered ">
-      <tbody>
-        </tr>
-          <tr>
-            <td>Min</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Max</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-          <tr>
-            <td>Median</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Mean</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-          <tr>
-            <td>1st quartil</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>3rd quartil</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-          <tr>
-            <td>Standard Deviation</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Average IPK</td>
-            <td><span class="badge bg-red">  </span></td>
-          </tr>
-      </tbody>
+    
     </table>
   </div>
-
 <div class="table-responsive">
   <table class="table table-bordered table-hover" id="customers">
     <thead>
@@ -172,6 +155,148 @@
       @endforeach
     </tbody>
   </table>
+  <table class="table" id="customers">
+    <thead class="thead-white">
+      <tr>
+          <th scope="col">Min</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </thead>
+    <tbody>
+    
+    <tr>
+          <th scope="col">Max</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    
+    <tr>
+          <th scope="col">Median</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    
+    <tr>
+          <th scope="col">Mean</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    
+    <tr>
+          <th scope="col">quartil 1</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+          <th scope="col">quartil 3</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+          <th scope="col">Standar Deviation</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+      </tr>
+    </tbody>
+    <tbody>
+    <tr>
+          <th scope="col">Average IPK</th>
+          <td>ddd</td>
+          <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+      </tr>
+    </tbody>
+  </table>
+  
 </div>
 <div class="d-flex justify-content-right">
   {!! $mahasiswas->links() !!}
