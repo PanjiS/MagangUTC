@@ -10,6 +10,7 @@ class PengelolaController extends Controller
 {
     public function getdatarekap_dosen()
     {
+      
       $pengelola = DB::table('data_dosen_kelas')
       
       ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')
