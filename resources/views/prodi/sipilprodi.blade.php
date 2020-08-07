@@ -121,7 +121,7 @@
             <td>Median</td>
             <td><span class="badge bg-red">  </span></td>
             <td>Mean</td>
-            <td><span class="badge bg-red">  </span></td>
+            <td><span class="badge bg-red"></span></td>
           </tr>
           <tr>
             <td>1st quartil</td>
