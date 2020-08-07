@@ -65,8 +65,9 @@ class MahasiswaController extends Controller
         }
         // dd($data);
         // $mahasiswa = Mahasiswa::all();
-        return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa,'data'=>$data,'head'=>$head]);
-        
+        return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa,'data'=>$data,'head'=>$head])
+        ->with('listsipil;', $mahasiswa)    
+        ->with('Smtsipil_terpilih','');
     }
 
    
@@ -113,7 +114,6 @@ class MahasiswaController extends Controller
                 $iii++;
             }
             $i++;
-            
         }
         
         // $mahasiswa = Mahasiswa::all();
@@ -130,14 +130,6 @@ class MahasiswaController extends Controller
         return view('prodi/ipkpbiprodi', ['mahasiswas' => $mahasiswa]);
     }
    
-    public function cari(Request $request)
-    {
-        $cari = $request->cari;
-        $mahasiswa = DB::table('data_nilai')
-        ->where('Student_Id','like',"%".$cari."%")
-        ->paginate();
-       return view('prodi/pbiprodi');
-    }
     /**
      * Show the form for creating a new resource.
      *
