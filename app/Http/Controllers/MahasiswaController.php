@@ -133,7 +133,7 @@ class MahasiswaController extends Controller
                 $data[$i][$ii+1]=$nl->Grade;
                 $data[$i][$ii+2]=$nl->Status;
                 $head[$iii][0]=$nl->Course_Id;
-                $head[$iii][1]='Weight';
+                $head[$iii][1]='Score';
                 $head[$iii][2]='Grade';
                 $head[$iii][3]='Status';
 
@@ -244,7 +244,7 @@ class MahasiswaController extends Controller
                 $data[$i][$ii+1]=$nl->Grade;
                 $data[$i][$ii+2]=$nl->Status;
                 $head[$iii][0]=$nl->Course_Id;
-                $head[$iii][1]='Weight';
+                $head[$iii][1]='Score';
                 $head[$iii][2]='Grade';
                 $head[$iii][3]='Status';
 
