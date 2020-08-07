@@ -101,7 +101,6 @@
     </div>
   </div>
 
-<<<<<<< HEAD
   <div class="col-md-9">
     <h1 style="text-align:center">Nilai Mata Kuliah Teknik Sipil</h1>
     <br>
@@ -261,7 +260,6 @@
   <div class="d-flex justify-content-right">
     {!! $mahasiswas->appends(request()->query())->links() !!}
   </div>
-=======
 <small class="help-block"></small>
 <div class="col-md-9">
 <h2 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h2>
@@ -477,7 +475,6 @@
 <div class="d-flex justify-content-right">
   {!! $mahasiswas->links() !!}
 </div>
->>>>>>> 9d00fd24bea4fdb92981c6139234666ad18a64a4
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">
