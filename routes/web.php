@@ -28,3 +28,6 @@ Route::get('/prodi/pbiprodi', 'MahasiswaController@getdatapbi');
 Route::get('/prodi/ipksipilprodi', 'MahasiswaController@ipk');
 Route::get('/prodi/ipkpbiprodi', 'MahasiswaController@ipkpbi');
 // Route::get('/prodi', 'MahasiswaController@prodi');
+
+//cari
+Route::get('/prodi/ipkpbiprodi/cari', 'MahasiswaController@cari');

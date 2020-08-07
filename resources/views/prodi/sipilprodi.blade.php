@@ -116,12 +116,17 @@
     <button type="submit" class="btn btn-flat btn-social btn-dropbox" id="button-reg">
     <i"></i> pilih</button>
   </div>
-
+  <div class="col-md-9">
+  <p> cari nim mahasiswa :</p> <form action="/prodi/ipkpbiprodi/cari" method="GET">
+  <input type="text" name="cari" placeholder="cari NIM ..." value="{{old('cari')}}">
+  <input type="submit" value="CARI">
+  </div>
   <div>
     <table class="table table-bordered ">
     
     </table>
   </div>
+ 
 
 <div class="table-responsive">
   <table class="table table-bordered table-hover" id="customers">
