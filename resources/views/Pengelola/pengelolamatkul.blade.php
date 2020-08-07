@@ -52,7 +52,7 @@
               <div class="panel-body">
                 <ul>
                 <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan Bahasa Inggris</a></li>
+                    <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan bahasa Inggris</a></li>
                    
 
                 </ul>
@@ -88,7 +88,7 @@
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
-      <th scope="col">no</th>
+      <th scope="col">No</th>
           <th scope="col">Department_Id</th>
           <th scope="col">Id MataKuliah</th>
           <th scope="col">Tahun Ajaran</th>
@@ -118,8 +118,6 @@
     </tbody>
     
   </table>
-  </br>
-  {{$pengelola->links()}}
 </div>          
            
           
@@ -151,11 +149,11 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/behavior.js"></script>
 
-
+</body>
 <div class="row">
       <div class="footer-copy green clearfix">
         
-              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+              <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ? Developed by Magang UTC Melinda Panji Namira</p>
          
            
        </div>

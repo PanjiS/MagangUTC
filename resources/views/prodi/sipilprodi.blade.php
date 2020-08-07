@@ -171,11 +171,9 @@
           @endforeach
           <tr>
 
-            <td>Median</td>
-            <td><span class="badge bg-red">  </span></td>
-            <td>Mean</td>
-            <td><span class="badge bg-red"></span></td>
-            <td colspan="{{count($head)}}">---</td>
+          
+            <td><span>  </span></td>
+            
           </tr>
           <tr>
               <th scope="col" colspan="4">Min</th>
