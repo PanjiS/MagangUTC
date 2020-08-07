@@ -105,25 +105,6 @@
     <h1 style="text-align:center">Nilai Mata Kuliah Teknik Sipil</h1>
     <br>
 
-<<<<<<< HEAD
-    <small class="help-block"></small>
-  </div>
-  <div class="col-md-3"> 
-    <button type="submit" class="btn btn-flat btn-social btn-dropbox" id="button-reg">
-    <i"></i> pilih</button>
-  </div>
-  <div class="col-md-9">
-  <p> cari nim mahasiswa :</p> <form action="/prodi/ipkpbiprodi/cari" method="GET">
-  <input type="text" name="cari" placeholder="cari NIM ..." value="{{old('cari')}}">
-  <input type="submit" value="CARI">
-  </div>
-  <div>
-    <table class="table table-bordered ">
-    
-    </table>
-  </div>
- 
-=======
     <div class="row">
       <form action="{{url('')}}/prodi/sipilprodi" method="GET">
         <div class="col-md-2">
@@ -139,7 +120,6 @@
 
           </select>
         </div>
->>>>>>> d91c736f41eab1e93f2d6965a1f90d469f32fc5e
 
         <div class="col-md-1">Tampilkan</div>
         <div class="form-group col-md-1">
@@ -190,6 +170,11 @@
             </tr>
           @endforeach
           <tr>
+
+            <td>Median</td>
+            <td><span class="badge bg-red">  </span></td>
+            <td>Mean</td>
+            <td><span class="badge bg-red"></span></td>
             <td colspan="{{count($head)}}">---</td>
           </tr>
           <tr>
@@ -283,7 +268,7 @@
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">
-    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ? Developed by Magang UTC Melinda Panji Namira</p>
   </div>
 </div>
           
