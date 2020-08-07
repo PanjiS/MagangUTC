@@ -170,6 +170,11 @@
             </tr>
           @endforeach
           <tr>
+
+            <td>Median</td>
+            <td><span class="badge bg-red">  </span></td>
+            <td>Mean</td>
+            <td><span class="badge bg-red"></span></td>
             <td colspan="{{count($head)}}">---</td>
           </tr>
           <tr>
@@ -263,7 +268,7 @@
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">
-    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ? Developed by Magang UTC Melinda Panji Namira</p>
   </div>
 </div>
           

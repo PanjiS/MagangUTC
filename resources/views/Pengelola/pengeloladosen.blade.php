@@ -139,6 +139,7 @@
       @endforeach
     </tbody>
   </table>
+  {{$pengelola->links()}}
 </div>
 
 
