@@ -10,6 +10,7 @@ class PengelolaController extends Controller
 {
     public function getdatarekap_dosen()
     {
+      
       $pengelola = DB::table('data_dosen_kelas')
       
       ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')
@@ -31,11 +32,14 @@ class PengelolaController extends Controller
       ->leftJoin('hasil_rekap_matkul','hasil_rekap_matkul.Course_Id','=','data_nilai.Course_Id')
       ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','data_nilai.TermYear_Id')
       ->select('data_nilai.Department_Id', 'data_nilai.Course_Id', 'master_term_year.TermYear_Name', 'hasil_rekap_matkul.Min', 'hasil_rekap_matkul.Max', 
-        'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK');
-
+        'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK')
+      ->distinct('data_nilai.Department_Id', 'data_nilai.Course_Id', 'master_term_year.TermYear_Name', 'hasil_rekap_matkul.Min', 'hasil_rekap_matkul.Max', 
+      'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK')
+      
+      ->get();
+      
       return view('/pengelola/pengelolamatkul', ['pengelola' => $pengelola]);
 
-    }
-
    
+}
 }
