@@ -170,14 +170,8 @@
             </tr>
           @endforeach
           <tr>
-<<<<<<< HEAD
             <td colspan="{{count($head)}}">---</td>
-=======
-
-          
             <td><span>  </span></td>
-            
->>>>>>> 9ab8139430712cb24811bdb8f20d7bb1b9d7239f
           </tr>
           <tr>
               <th scope="col" colspan="4">Min</th>
