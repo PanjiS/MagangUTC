@@ -172,23 +172,27 @@
             </tr>
           @endforeach
           <tr>
+<<<<<<< HEAD
 
           
           <td colspan="{{count($head)}}"></td>
             
+=======
+            <td colspan="{{count($head)}}">---</td>
+            <td><span>  </span></td>
+>>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
           </tr>
           <tr>
               <th scope="col" colspan="4">Min</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['min'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Max</th>
+<<<<<<< HEAD
               @foreach($head as $h)
                 @if(is_array($h))
                 
@@ -198,50 +202,49 @@
                 <td scope="col"></td>
                 <td scope="col"></td>
                 @endif
+=======
+              @foreach($foot['max'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
+>>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Median</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['median'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Mean</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['avg'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">quartil 1</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['q1'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">quartil 3</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['q3'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Standar Deviation</th>
+<<<<<<< HEAD
               @foreach($head as $h)
                 @if(is_array($h))
                 <td scope="col"></td>
@@ -251,6 +254,14 @@
               @endforeach
           </tr>
          
+=======
+              @foreach($foot['stdev'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
+              @endforeach
+          </tr>
+>>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
         </tbody>
       </table>  
     </div>

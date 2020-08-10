@@ -133,7 +133,7 @@ class MahasiswaController extends Controller
                 $data[$i][$ii+1]=$nl->Grade;
                 $data[$i][$ii+2]=$nl->Status;
                 $head[$iii][0]=$nl->Course_Id;
-                $head[$iii][1]='Weight';
+                $head[$iii][1]='Score';
                 $head[$iii][2]='Grade';
                 $head[$iii][3]='Status';
 
@@ -176,15 +176,76 @@ class MahasiswaController extends Controller
                     $data[$i][$ii+1]='';
                     $data[$i][$ii+2]='';
                 }
+
             }
             $i++;
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
         }
+        $foot=[];
+        for($ii=3;$ii<count($head);$ii=$ii+1){
+            $nl = DB::table('data_nilai')
+                
+                ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
+                ->select(DB::raw('MIN(data_nilai.Weight) AS MIN_Weight, MAX(data_nilai.Weight)AS MAX_Weight, AVG(CAST(data_nilai.Weight AS float))AS AVG_Weight, STDEV(CAST(data_nilai.Weight AS float)) AS STDEV_Weight'))
+                ->where([['data_nilai.Department_Id', '=', 11],['master_term_year.TermYear_Name',$mhs->TermYear_Name],['data_nilai.Course_Id',$head[$ii][0]]])
+                ->first();
+            $foot['min'][$ii] = $nl->MIN_Weight;
+            $foot['max'][$ii] = $nl->MAX_Weight;
+            $foot['avg'][$ii] = $nl->AVG_Weight;
+            $foot['stdev'][$ii] = $nl->STDEV_Weight;
+
+            $md = DB::table('data_nilai')
+                
+                ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
+                ->select('Weight')
+                ->orderBy('Weight','ASC')
+                ->where([['data_nilai.Department_Id', '=', 11],['master_term_year.TermYear_Name',$mhs->TermYear_Name],['data_nilai.Course_Id',$head[$ii][0]]])
+                ->get();
+            $mdl=count($md);
+            $median=0;
+            if($mdl %2==0){
+                $median=($md[($mdl/2)-1]->Weight + $md[$mdl/2]->Weight)/2;
+            }
+            else{
+                $median=$md[Floor($mdl/2)]->Weight;
+            }
+            $q1=0;
+            if($mdl %2==0){
+                if(((($mdl+2)/4)-1)%1!=0){
+                    $q1=($md[(Floor(($mdl+2)/4) - 1)]->Weight + $md[(Floor(($mdl+2)/4))]->Weight)/2;
+                }
+                
+            }
+            else{
+                $q1=$md[Floor($mdl/4)]->Weight;
+            }
+            $q3=0;
+            if($mdl %2==0){
+                if(((($mdl+2)*3/4)-1)%1!=0){
+                    $q3=($md[(Floor(($mdl+2)*3/4) - 1)]->Weight + $md[(Floor(($mdl+2)*3/4))]->Weight)/2;
+                }
+                
+            }
+            else{
+                $q3=$md[Floor($mdl*3/4)]->Weight;
+            }
+            $foot['median'][$ii]=$median;
+            $foot['q1'][$ii]=$q1;
+            $foot['q3'][$ii]=$q3;
+
+        } 
+
+
 
         return view('prodi/sipilprodi', ['mahasiswas' => $mahasiswa,'data'=>$data,'head'=>$head])
         ->with('sort',$sort)
         ->with('thnsm',$request->thnsm)
-        ->with('termyears',$termyears);
+        ->with('termyears',$termyears)
+        ->with('foot',$foot);
     }
 
    
@@ -246,7 +307,7 @@ class MahasiswaController extends Controller
                 $data[$i][$ii+1]=$nl->Grade;
                 $data[$i][$ii+2]=$nl->Status;
                 $head[$iii][0]=$nl->Course_Id;
-                $head[$iii][1]='Weight';
+                $head[$iii][1]='Score';
                 $head[$iii][2]='Grade';
                 $head[$iii][3]='Status';
 
@@ -292,11 +353,66 @@ class MahasiswaController extends Controller
             }
             $i++;
         }
+        $foot=[];
+        for($ii=3;$ii<count($head);$ii=$ii+1){
+            $nl = DB::table('data_nilai')
+                
+                ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
+                ->select(DB::raw('MIN(data_nilai.Weight) AS MIN_Weight, MAX(data_nilai.Weight)AS MAX_Weight, AVG(CAST(data_nilai.Weight AS float))AS AVG_Weight, STDEV(CAST(data_nilai.Weight AS float)) AS STDEV_Weight'))
+                ->where([['data_nilai.Department_Id', '=', 81],['master_term_year.TermYear_Name',$mhs->TermYear_Name],['data_nilai.Course_Id',$head[$ii][0]]])
+                ->first();
+            $foot['min'][$ii] = $nl->MIN_Weight;
+            $foot['max'][$ii] = $nl->MAX_Weight;
+            $foot['avg'][$ii] = $nl->AVG_Weight;
+            $foot['stdev'][$ii] = $nl->STDEV_Weight;
+
+            $md = DB::table('data_nilai')
+                
+                ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','master_term_year.TermYear_Id')
+                ->select('Weight')
+                ->orderBy('Weight','ASC')
+                ->where([['data_nilai.Department_Id', '=', 81],['master_term_year.TermYear_Name',$mhs->TermYear_Name],['data_nilai.Course_Id',$head[$ii][0]]])
+                ->get();
+            $mdl=count($md);
+            $median=0;
+            if($mdl %2==0){
+                $median=($md[($mdl/2)-1]->Weight + $md[$mdl/2]->Weight)/2;
+            }
+            else{
+                $median=$md[Floor($mdl/2)]->Weight;
+            }
+            $q1=0;
+            if($mdl %2==0){
+                if(((($mdl+2)/4)-1)%1!=0){
+                    $q1=($md[(Floor(($mdl+2)/4) - 1)]->Weight + $md[(Floor(($mdl+2)/4))]->Weight)/2;
+                }
+                
+            }
+            else{
+                $q1=$md[Floor($mdl/4)]->Weight;
+            }
+            $q3=0;
+            if($mdl %2==0){
+                if(((($mdl+2)*3/4)-1)%1!=0){
+                    $q3=($md[(Floor(($mdl+2)*3/4) - 1)]->Weight + $md[(Floor(($mdl+2)*3/4))]->Weight)/2;
+                }
+                
+            }
+            else{
+                $q3=$md[Floor($mdl*3/4)]->Weight;
+            }
+            $foot['median'][$ii]=$median;
+            $foot['q1'][$ii]=$q1;
+            $foot['q3'][$ii]=$q3;
+
+        } 
+
 
         return view('prodi/pbiprodi', ['mahasiswas' => $mahasiswa,'data'=>$data,'head'=>$head])
         ->with('sort',$sort)
         ->with('thnsm',$request->thnsm)
-        ->with('termyears',$termyears);
+        ->with('termyears',$termyears)
+        ->with('foot',$foot);;
     }
     public function ipk()
     {
