@@ -89,43 +89,45 @@
 <div class="col-md-9">
 <h2 style="text-align:center">Daftar Rekap Dosen Mata Kuliah</h2>
 <br>
-  <label class="col-md-3 control-label">Tahun Akademik</label>
-  <div class="col-md-3">
-  <select class="form-control">
-    <option >2017</option>
-    <option >2018</option>
-</select>
-<small class="help-block"></small>
-</div>
-  <div class="col-md-3"> 
- 
-    <button type="submit" class="btn btn-flat btn-social btn-dropbox" id="button-reg">
-    <i"></i> pilih</button>
+<div class="row">
+      <form action="{{url('')}}/pengelola/pengeloladosen" method="GET">
+        <div class="col-md-2">
+        Tahun Akademik
+        </div>
+        
+        <div class="form-group col-md-3">
+          <select name="thnsm" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
+            <option value="">Pilih Semester</option>
+            @foreach($termyears as $trmy)
+            <option value="{{$trmy->TermYear_Id}}" <?php if($thnsm==$trmy->TermYear_Id){echo'selected';}?> >{{$trmy->TermYear_Name}}</option>
+            @endforeach
 
-  </div>
+          </select>
+        </div>
+
 
 
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
-        <th scope="co1">No</th>
-        <th scope="co1">Department Id</th>
-        <th scope="co1">Id Dosen</th>
-        <th scope="co1">Nama</th>
-        <th scope="co1">Tahun Ajaran/Semester</th>
-        <th scope="co1">Mata Kuliah</th>
-        <th scope="co1">Status</th>
-        <th scope="co1">Mean IPK</th>
-        <th scope="co1">n Failed</th>
-        <th scope="co1">n borderline</th>
-        <th scope="co1">n students</th>
+        <th scope="co1"  style='text-align:center'>No</th>
+        <th scope="co1"  style='text-align:center'>Department Id</th>
+        <th scope="co1"  style='text-align:center'>Id Dosen</th>
+        <th scope="co1"  style='text-align:center'>Nama</th>
+        <th scope="co1"  style='text-align:center'>Tahun Ajaran/Semester</th>
+        <th scope="co1"  style='text-align:center'>Mata Kuliah</th>
+        <th scope="co1" style='text-align:center'>Status</th>
+        <th scope="co1"  style='text-align:center'>Mean IPK</th>
+        <th scope="co1"  style='text-align:center'>n Failed</th>
+        <th scope="co1"  style='text-align:center'>n borderline</th>
+        <th scope="co1"  style='text-align:center'>n students</th>
       </tr>
     </thead>
     <tbody>
       @foreach($pengelola as $png)
         <tr>
-            <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$png->Department_Id}}</td>
+            <th scope="row" style='text-align:center'>{{$loop->iteration}}</th>
+            <td  style='text-align:center'>{{$png->Department_Id}}</td>
             <td>{{$png->Lecture_Id}}</td>
             <td>{{$png->Lecture_Name}}</td>
             <td>{{$png->TermYear_Name}}</td>
@@ -139,7 +141,7 @@
       @endforeach
     </tbody>
   </table>
-  {{$pengelola->links()}}
+ 
 </div>
 
 
@@ -171,6 +173,10 @@
 <script src="/js/behavior.js"></script>
 
 </body>
+<div class="d-flex justify-content-right">
+    {!! $pengelola->appends(request()->query())->links() !!}
+  </div>
+</div>
 
 <div class="row">
       <div class="footer-copy green clearfix">

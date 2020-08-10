@@ -50,7 +50,7 @@
 <div class="nav">
   <ul>
   <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li>
-    <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li>
+    <!-- <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li> -->
     <a href="{{ url('/home') }}">Home</a>    
   </ul>
 </div>
@@ -122,7 +122,7 @@
         </div>
 
         <div class="col-md-1">Tampilkan</div>
-        <div class="form-group col-md-1">
+        <div class="form-group col-md-2">
           <select name="nampil" id="" class="form-control input-sm dynamic" onchange="this.form.submit()">
             <option value="10"  <?php if($sort==10){echo'selected';}?> >10</option>
             <option value="50"  <?php if($sort==50){echo'selected';}?> >50</option>
@@ -139,7 +139,7 @@
       <table class="table table-bordered table-hover" id="customers">
         <thead>
           <tr>
-              <th scope="col" rowspan='2'></th>
+              <th scope="col" rowspan='2'>No</th>
               @foreach($head as $h)
               @if(is_array($h))
               <th scope="col" colspan='3' style='text-align:center'>{{$h[0]}}</th>
@@ -170,7 +170,7 @@
             </tr>
           @endforeach
           <tr>
-            <td colspan="{{count($head)}}">---</td>
+            <td colspan="{{count($head)}}"></td>
           </tr>
           <tr>
               <th scope="col" colspan="4">Min</th>
@@ -242,16 +242,7 @@
                 @endif
               @endforeach
           </tr>
-          <tr>
-              <th scope="col" colspan="4">Average IPK</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
-              @endforeach
-          </tr>
+          
         </tbody>
       </table>  
     </div>
@@ -263,7 +254,7 @@
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">
-    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ? Developed by Magang UTC Melinda Panji Namira</p>
+    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta | Developed by Magang UTC Melinda Panji Namira</p>
   </div>
 </div>
           

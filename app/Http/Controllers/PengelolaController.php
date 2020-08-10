@@ -8,9 +8,19 @@ use DB;
 
 class PengelolaController extends Controller
 {
-    public function getdatarekap_dosen()
+    public function getdatarekap_dosen(Request $request)
     {
+      $sort=10;
+      if($request->nampil != null )
+      {
+          $sort= $request->nampil;
+      }
+      $termyears=DB::table('master_term_year')->get();
+
       
+      if($request->thnsm != null)
+      {
+
       $pengelola = DB::table('data_dosen_kelas')
       
       ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')
@@ -20,14 +30,43 @@ class PengelolaController extends Controller
         'hasil_rekap_dosen.Mean_IPK', 'hasil_rekap_dosen.nFailed', 'hasil_rekap_dosen.nBorderline', 'hasil_rekap_dosen.nStudents')
       ->distinct('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 'hasil_rekap_dosen.Status', 
       'hasil_rekap_dosen.Mean_IPK', 'hasil_rekap_dosen.nFailed', 'hasil_rekap_dosen.nBorderline', 'hasil_rekap_dosen.nStudents')
+      ->where('data_dosen_kelas.TermYear_Id','=',$request->thnsm)
       
-        ->simplePaginate(20);
+        ->simplePaginate($sort);
+      }
+      else{
+        $pengelola = DB::table('data_dosen_kelas')
+          
+      ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')
+      ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','data_dosen_kelas.TermYear_Id')
+      ->leftJoin('master_dosen','master_dosen.Lecture_Id','=','data_dosen_kelas.Lecture_Id')
+      ->select('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 'hasil_rekap_dosen.Status', 
+        'hasil_rekap_dosen.Mean_IPK', 'hasil_rekap_dosen.nFailed', 'hasil_rekap_dosen.nBorderline', 'hasil_rekap_dosen.nStudents')
+      ->distinct('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 'hasil_rekap_dosen.Status', 
+      'hasil_rekap_dosen.Mean_IPK', 'hasil_rekap_dosen.nFailed', 'hasil_rekap_dosen.nBorderline', 'hasil_rekap_dosen.nStudents')
       
-      return view('/pengelola/pengeloladosen', ['pengelola' => $pengelola]);
+        ->simplePaginate($sort);
+      }
+
+      
+      return view('/pengelola/pengeloladosen', ['pengelola' => $pengelola])
+        ->with('sort',$sort)
+        ->with('thnsm',$request->thnsm)
+        ->with('termyears',$termyears);
     }
 
-    public function getdatarekap_matkul()
+    public function getdatarekap_matkul(Request $request)
     {
+      $sort=10;
+      if($request->nampil != null )
+      {
+          $sort= $request->nampil;
+      }
+      $termyears=DB::table('master_term_year')->get();
+
+      
+      if($request->thnsm != null)
+      {
       $pengelola = DB::table('data_nilai')
       ->leftJoin('hasil_rekap_matkul','hasil_rekap_matkul.Course_Id','=','data_nilai.Course_Id')
       ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','data_nilai.TermYear_Id')
@@ -35,10 +74,24 @@ class PengelolaController extends Controller
         'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK')
       ->distinct('data_nilai.Department_Id', 'data_nilai.Course_Id', 'master_term_year.TermYear_Name', 'hasil_rekap_matkul.Min', 'hasil_rekap_matkul.Max', 
       'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK')
-      
-      ->get();
-      
-      return view('/pengelola/pengelolamatkul', ['pengelola' => $pengelola]);
+      ->where('data_nilai.TermYear_Id','=',$request->thnsm)
+      ->simplePaginate($sort);
+      }
+      else{
+        $pengelola = DB::table('data_nilai')
+        ->leftJoin('hasil_rekap_matkul','hasil_rekap_matkul.Course_Id','=','data_nilai.Course_Id')
+      ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','data_nilai.TermYear_Id')
+      ->select('data_nilai.Department_Id', 'data_nilai.Course_Id', 'master_term_year.TermYear_Name', 'hasil_rekap_matkul.Min', 'hasil_rekap_matkul.Max', 
+        'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK')
+      ->distinct('data_nilai.Department_Id', 'data_nilai.Course_Id', 'master_term_year.TermYear_Name', 'hasil_rekap_matkul.Min', 'hasil_rekap_matkul.Max', 
+      'hasil_rekap_matkul.Median', 'hasil_rekap_matkul.Mean', 'hasil_rekap_matkul.Standard_Deviation', 'hasil_rekap_matkul.Average_IPK')
+      ->simplePaginate($sort);
+    }
+
+      return view('/pengelola/pengelolamatkul', ['pengelola' => $pengelola])
+        ->with('sort',$sort)
+        ->with('thnsm',$request->thnsm)
+        ->with('termyears',$termyears);
 
    
 }

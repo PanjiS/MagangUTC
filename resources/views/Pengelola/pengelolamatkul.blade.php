@@ -84,27 +84,43 @@
 </div>
 <div class="col-md-9">
 <h2 style="text-align:center">Daftar Rekap IPK Mata Kuliah</h2>
+<br>
+<div class="row">
+      <form action="{{url('')}}/pengelola/pengelolamatkul" method="GET">
+        <div class="col-md-2">
+        Tahun Akademik
+        </div>
+        
+        <div class="form-group col-md-3">
+          <select name="thnsm" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
+            <option value="">Pilih Semester</option>
+            @foreach($termyears as $trmy)
+            <option value="{{$trmy->TermYear_Id}}" <?php if($thnsm==$trmy->TermYear_Id){echo'selected';}?> >{{$trmy->TermYear_Name}}</option>
+            @endforeach
+
+          </select>
+        </div>
 
   <table class="table" id="customers">
     <thead class="thead-white">
       <tr>
       <th scope="col">No</th>
-          <th scope="col">Department_Id</th>
-          <th scope="col">Id MataKuliah</th>
-          <th scope="col">Tahun Ajaran</th>
-          <th scope="col">Nilai Minimum</th>
-          <th scope="col">Nilai Maximum</th>
-          <th scope="col">Nilai Tengah (Median)</th>
-          <th scope="col">Nilai Rata-rata (Mean)</th>
-          <th scope="col">Standard Deviasi</th>
-          <th scope="col">Average IPK</th>
+          <th scope="col"  style='text-align:center'>Department_Id</th>
+          <th scope="col"  style='text-align:center'>Id MataKuliah</th>
+          <th scope="col"  style='text-align:center'>Tahun Ajaran</th>
+          <th scope="col" style='text-align:center'>Nilai Minimum</th>
+          <th scope="col"  style='text-align:center'>Nilai Maximum</th>
+          <th scope="col"  style='text-align:center'>Nilai Tengah (Median)</th>
+          <th scope="col"  style='text-align:center'>Nilai Rata-rata (Mean)</th>
+          <th scope="col"  style='text-align:center'>Standard Deviasi</th>
+         
       </tr>
     </thead>
     <tbody>
       @foreach($pengelola as $png)
         <tr>
-            <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$png->Department_Id}}</td>
+            <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
+            <td  style='text-align:center'>{{$png->Department_Id}}</td>
             <td>{{$png->Course_Id}}</td>
             <td>{{$png->TermYear_Name}}</td>
             <td>{{$png->Min}}</td>
@@ -112,7 +128,7 @@
             <td>{{$png->Median}}</td>
             <td>{{$png->Mean}}</td>
             <td>{{$png->Standard_Deviation}}</td>
-            <td>{{$png->Average_IPK}}</td>
+          
         </tr>
       @endforeach
     </tbody>
@@ -150,6 +166,11 @@
 <script src="/js/behavior.js"></script>
 
 </body>
+<div class="d-flex justify-content-right">
+    {!! $pengelola->appends(request()->query())->links() !!}
+  </div>
+</div>
+
 <div class="row">
       <div class="footer-copy green clearfix">
         
