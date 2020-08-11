@@ -179,11 +179,6 @@ class MahasiswaController extends Controller
 
             }
             $i++;
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
         }
         $foot=[];
         for($ii=3;$ii<count($head);$ii=$ii+1){
@@ -289,9 +284,9 @@ class MahasiswaController extends Controller
             $data[$i][0]=$mhs->Department_Id;
             $data[$i][1]=$mhs->Student_Id;
             $data[$i][2]=$mhs->TermYear_Name;
-            $head[0]='Department Id';
-            $head[1]='Student Id';
-            $head[2]='TermYear Name';
+            $head[0]='ID Prodi';
+            $head[1]='NIM';
+            $head[2]='Tahun Ajaran';
 
             $nilai = DB::table('data_nilai')
             ->leftJoin('data_hasil_nilai','data_hasil_nilai.datanilai_Id','=','data_hasil_nilai.hasilnilai_Id')

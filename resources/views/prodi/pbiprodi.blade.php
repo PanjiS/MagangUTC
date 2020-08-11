@@ -49,7 +49,7 @@
 
 <div class="nav">
   <ul>
-  <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li>
+  <!-- <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li> -->
     <!-- <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li> -->
     <a href="{{ url('/home') }}">Home</a>    
   </ul>
@@ -63,7 +63,7 @@
                 <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
                     Program Studi                                         
-                  <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
+                  </a>
                 </h4>
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
@@ -83,7 +83,7 @@
                 <h4 class="panel-title">
                   <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   Rekap Hasil 
-                  <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
+                  </a>
                 </h4>
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
@@ -102,11 +102,11 @@
   </div>
 
   <div class="col-md-9">
-    <h1 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h1>
+    <h1 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Ingrris</h1>
     <br>
 
     <div class="row">
-      <form action="{{url('')}}/prodi/pbiprodi" method="GET">
+      <form action="{{url('')}}/prodi/sipilprodi" method="GET">
         <div class="col-md-2">
         Tahun Akademik
         </div>
@@ -144,16 +144,16 @@
               @if(is_array($h))
               <th scope="col" colspan='3' style='text-align:center'>{{$h[0]}}</th>
               @else
-              <th scope="col" rowspan='2'>{{$h}}</th>
+              <th scope="col" rowspan='2'style='text-align:center'>{{$h}}</th>
               @endif
             @endforeach
           </tr>
           <tr>
           @foreach($head as $h)
               @if(is_array($h))
-              <th scope="col">{{$h[1]}}</th>
-              <th scope="col">{{$h[2]}}</th>
-              <th scope="col">{{$h[3]}}</th>
+              <th scope="col" style='text-align:center'>{{$h[1]}}</th>
+              <th scope="col" style='text-align:center'>{{$h[2]}}</th>
+              <th scope="col" style='text-align:center'>{{$h[3]}}</th>
               
               @endif
             @endforeach
@@ -162,20 +162,16 @@
         <tbody>
           @foreach($data as $mhs)
             <tr>
-                <th scope="row">{{$loop->iteration}}</th>
+                <th scope="row" style='text-align:center'>{{$loop->iteration}}</th>
                 @foreach($mhs as $mh)
-                <td>{{$mh}}</td>
+                <td style='text-align:center'>{{$mh}}</td>
                 @endforeach
                 
             </tr>
           @endforeach
           <tr>
-<<<<<<< HEAD
             <td colspan="{{count($head)}}"></td>
-=======
-            <td colspan="{{count($head)}}">---</td>
             <td><span>  </span></td>
->>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
           </tr>
           <tr>
               <th scope="col" colspan="4">Min</th>
@@ -227,36 +223,24 @@
           </tr>
           <tr>
               <th scope="col" colspan="4">Standar Deviation</th>
-<<<<<<< HEAD
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
-              @endforeach
-          </tr>
-          
-=======
               @foreach($foot['stdev'] as $f)
                 
                 <td scope="col" colspan="3">{{$f}}</td>
               
               @endforeach
           </tr>
->>>>>>> fc1cc5316afdbf74450ead11cc5e82c4462bc979
         </tbody>
       </table>  
     </div>
   </div>
 
-<div class="d-flex justify-content-right">
-{!! $mahasiswas->appends(request()->query())->links() !!}
-</div>
+  <div class="d-flex justify-content-right">
+    {!! $mahasiswas->appends(request()->query())->links() !!}
+  </div>
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">
-    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta | Developed by Magang UTC Melinda Panji Namira</p>
+    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ? Developed by Magang UTC Melinda Panji Namira</p>
   </div>
 </div>
           
