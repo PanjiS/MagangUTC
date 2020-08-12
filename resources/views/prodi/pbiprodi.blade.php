@@ -49,8 +49,8 @@
 
 <div class="nav">
   <ul>
-  <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li>
-    <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li>
+  <!-- <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li> -->
+    <!-- <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li> -->
     <a href="{{ url('/home') }}">Home</a>    
   </ul>
 </div>
@@ -63,7 +63,7 @@
                 <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
                     Program Studi                                         
-                  <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
+                  </a>
                 </h4>
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
@@ -83,7 +83,7 @@
                 <h4 class="panel-title">
                   <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   Rekap Hasil 
-                  <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
+                  </a>
                 </h4>
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
@@ -102,11 +102,15 @@
   </div>
 
   <div class="col-md-9">
+<<<<<<< HEAD
     <h1 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h1>
+=======
+    <h1 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Ingrris</h1>
+>>>>>>> 70a7162fcfe0ee0803d386b765acd0ab157426ee
     <br>
 
     <div class="row">
-      <form action="{{url('')}}/prodi/pbiprodi" method="GET">
+      <form action="{{url('')}}/prodi/sipilprodi" method="GET">
         <div class="col-md-2">
         Tahun Akademik
         </div>
@@ -122,7 +126,7 @@
         </div>
 
         <div class="col-md-1">Tampilkan</div>
-        <div class="form-group col-md-1">
+        <div class="form-group col-md-2">
           <select name="nampil" id="" class="form-control input-sm dynamic" onchange="this.form.submit()">
             <option value="10"  <?php if($sort==10){echo'selected';}?> >10</option>
             <option value="50"  <?php if($sort==50){echo'selected';}?> >50</option>
@@ -139,21 +143,21 @@
       <table class="table table-bordered table-hover" id="customers">
         <thead>
           <tr>
-              <th scope="col" rowspan='2'></th>
+              <th scope="col" rowspan='2'>No</th>
               @foreach($head as $h)
               @if(is_array($h))
               <th scope="col" colspan='3' style='text-align:center'>{{$h[0]}}</th>
               @else
-              <th scope="col" rowspan='2'>{{$h}}</th>
+              <th scope="col" rowspan='2'style='text-align:center'>{{$h}}</th>
               @endif
             @endforeach
           </tr>
           <tr>
           @foreach($head as $h)
               @if(is_array($h))
-              <th scope="col">{{$h[1]}}</th>
-              <th scope="col">{{$h[2]}}</th>
-              <th scope="col">{{$h[3]}}</th>
+              <th scope="col" style='text-align:center'>{{$h[1]}}</th>
+              <th scope="col" style='text-align:center'>{{$h[2]}}</th>
+              <th scope="col" style='text-align:center'>{{$h[3]}}</th>
               
               @endif
             @endforeach
@@ -162,94 +166,71 @@
         <tbody>
           @foreach($data as $mhs)
             <tr>
-                <th scope="row">{{$loop->iteration}}</th>
+                <th scope="row" style='text-align:center'>{{$loop->iteration}}</th>
                 @foreach($mhs as $mh)
-                <td>{{$mh}}</td>
+                <td style='text-align:center'>{{$mh}}</td>
                 @endforeach
                 
             </tr>
           @endforeach
           <tr>
-            <td colspan="{{count($head)}}">---</td>
+            <td colspan="{{count($head)}}"></td>
+            <td><span>  </span></td>
           </tr>
           <tr>
               <th scope="col" colspan="4">Min</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['min'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Max</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['max'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Median</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['median'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Mean</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['avg'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">quartil 1</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['q1'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">quartil 3</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['q3'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
           <tr>
               <th scope="col" colspan="4">Standar Deviation</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
-              @endforeach
-          </tr>
-          <tr>
-              <th scope="col" colspan="4">Average IPK</th>
-              @foreach($head as $h)
-                @if(is_array($h))
-                <td scope="col"></td>
-                <td scope="col"></td>
-                <td scope="col"></td>
-                @endif
+              @foreach($foot['stdev'] as $f)
+                
+                <td scope="col" colspan="3">{{$f}}</td>
+              
               @endforeach
           </tr>
         </tbody>
@@ -257,27 +238,33 @@
     </div>
   </div>
 
+<<<<<<< HEAD
 <div class="d-flex justify-content-right">
 {!! $mahasiswas->appends(request()->query())->links() !!}
 </div>
+=======
+  <div class="d-flex justify-content-right">
+    {!! $mahasiswas->appends(request()->query())->links() !!}
+  </div>
+>>>>>>> 70a7162fcfe0ee0803d386b765acd0ab157426ee
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">
-    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
+    <p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta || Developed by Magang UTC Melinda Panji Namira</p>
   </div>
 </div>
           
 
-<script type="text/javascript" >
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-28600692-1']);
-        _gaq.push(['_trackPageview']);
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28600692-1']);
+  _gaq.push(['_trackPageview']);
 
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 </script>
 
 

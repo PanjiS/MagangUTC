@@ -25,6 +25,8 @@ Route::get('/pengelola/pengelolamatkul', 'PengelolaController@getdatarekap_matku
 
 Route::get('/prodi/sipilprodi', 'MahasiswaController@getdata');
 Route::get('/prodi/pbiprodi', 'MahasiswaController@getdatapbi');
-Route::get('/prodi/ipksipilprodi', 'MahasiswaController@ipk');
-Route::get('/prodi/ipkpbiprodi', 'MahasiswaController@ipkpbi');
+// Route::get('/prodi/ipksipilprodi', 'MahasiswaController@ipk');
+// Route::get('/prodi/ipkpbiprodi', 'MahasiswaController@ipkpbi');
 // Route::get('/prodi', 'MahasiswaController@prodi');
+
+//cari
