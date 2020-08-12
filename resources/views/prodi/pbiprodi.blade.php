@@ -177,7 +177,11 @@
               <th scope="col" colspan="4">Min</th>
               @foreach($foot['min'] as $f)
                 
+<<<<<<< HEAD
                 <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
+=======
+                <td scope="col" colspan="3 " style='text-align:center'>{{$f}}</td>
+>>>>>>> 294a91b0588a58b69b2ca77c484ffd5f6001264a
               
               @endforeach
           </tr>

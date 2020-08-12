@@ -14,6 +14,10 @@
         width: 100%;
         height: 100%;
         }
+        .nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+}
         </style>
 
     <title>@yield('title')</title>
@@ -26,11 +30,11 @@
             <img src="/img/logo.png" class="custom-brand-img" width="250" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">Menu</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="{{ url('/home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url('/home') }}" >Home</a>
                 <a class="nav-item nav-link" href="{{ url('/prodi/sipilprodi') }}">Analisis Prodi </a>
                 <a class="nav-item nav-link" href="{{ url('/pengelola/pengeloladosen') }}">Analisis Rekap Penilaian Matkul</a>
                 <a class="nav-item nav-link" href="{{ url('/') }}"></a>
@@ -39,6 +43,8 @@
         </div>
     </div>
     </nav>
+
+    
 
 @yield('container')
 

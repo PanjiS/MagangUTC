@@ -17,7 +17,7 @@
 <!-- The slideshow -->
 <div class="carousel-inner">
   <div class="carousel-item active">
-    <img src="/img/banner2.jpeg" alt="Gambar - 1" width="1280" height="700">
+    <img src="/img/Selamat.png" alt="Gambar - 1" width="1280" height="700">
     <div class="carousel-caption">
       <!-- <h3>Slide 1</h3>
       <p>Deskripsi Slide 1</p> -->
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="carousel-item">
-    <img src="/img/wallpaper.jpg" alt="Gambar - 3" width="1280" height="700">
+    <img src="/img/banner2.jpeg" alt="Gambar - 3" width="1280" height="700">
     <div class="carousel-caption">
       <!-- <h3>Slide 3</h3>
       <p>Deskripsi Slide 3</p> -->
@@ -46,15 +46,18 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-<div id="copyright text-right">
-<div class="footer-copy green clearfix">
-<p style="text-align:center">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
-         
+
 
 </div>
 </div>
-  </div>
+
+<div class="footer">
+<p style="text-align:center" class="footer">© 2020 Universitas Muhammadiyah Yogyakarta ● Developed by Magang UTC Melinda Panji Namira</p>
 </div>
+    
+
+
+
 
           
 
