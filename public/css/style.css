@@ -367,11 +367,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e6b3a', end
 .navbar-custom {
     background-color: #004028;
 }
+
+
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
     color: rgba(255,255,255,.8);
 }
+
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
     color: rgba(255,255,255,.5);

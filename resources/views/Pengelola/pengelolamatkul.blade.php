@@ -140,12 +140,12 @@
               <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
               <td>{{$png['Course_Id']}}</td>
-              <td>{{$png['TermYear_Name']}}</td>
-              <td>{{$png['Min']}}</td>
-              <td>{{$png['Max']}}</td>
-              <td>{{$png['Median']}}</td>
-              <td>{{$png['Mean_IPK']}}</td>
-              <td>{{$png['Stdev']}}</td>
+              <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
+              <td style='text-align:center'>{{$png['Min']}}</td>
+              <td style='text-align:center'>{{$png['Max']}}</td>
+              <td style='text-align:center'>{{$png['Median']}}</td>
+              <td style='text-align:center'>{{$png['Mean_IPK']}}</td>
+              <td style='text-align:center'>{{$png['Stdev']}}</td>
             </tr>
             @endforeach
           </tbody> 

@@ -128,7 +128,7 @@
               <th scope="co1"  style='text-align:center'>Department Id</th>
               <th scope="co1"  style='text-align:center'>Id Dosen</th>
               <th scope="co1"  style='text-align:center'>Nama</th>
-              <th scope="co1"  style='text-align:center'>Tahun Ajaran/Semester</th>
+              <th scope="co1"  style='text-align:center'>Tahun Ajaran</th>
               <th scope="co1"  style='text-align:center'>Mata Kuliah</th>
               <th scope="co1" style='text-align:center'>Status</th>
               <th scope="co1"  style='text-align:center'>Mean</th>
@@ -147,10 +147,10 @@
               <td>{{$png['TermYear_Name']}}</td>
               <td>{{$png['Course_Id']}}</td>
               <td style="color:{{$png['Status']}}">{{$png['Status']}}</td>
-              <td>{{$png['Mean_IPK']}}</td>
-              <td>{{$png['nFailed']}}</td>
-              <td>{{$png['nBorderline']}}</td>
-              <td>{{$png['nStudents']}}</td>
+              <td  style='text-align:center'>{{$png['Mean_IPK']}}</td>
+              <td  style='text-align:center'>{{$png['nFailed']}}</td>
+              <td  style='text-align:center'>{{$png['nBorderline']}}</td>
+              <td  style='text-align:center'>{{$png['nStudents']}}</td>
             </tr>
             @endforeach
           </tbody>
