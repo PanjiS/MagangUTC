@@ -95,7 +95,7 @@
 </div>
 </div>
 <div class="col-md-9">
-  <h2 style="text-align:center">Daftar Rekap Mata Kuliah</h2>
+  <h2 style="text-align:center">Daftar Rekap Dosen Mata Kuliah</h2>
   <br>
   <div class="row">
     <form action="{{url('')}}/pengelola/pengeloladosen" method="GET">
@@ -142,15 +142,15 @@
             <tr>
               <th scope="row" style='text-align:center'>{{$loop->iteration}}</th>
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
-              <td>{{$png['Lecture_Id']}}</td>
+              <td style='text-align:center'>{{$png['Lecture_Id']}}</td>
               <td>{{$png['Lecture_Name']}}</td>
-              <td>{{$png['TermYear_Name']}}</td>
-              <td>{{$png['Course_Id']}}</td>
+              <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
+              <td style='text-align:center'>{{$png['Course_Id']}}</td>
               <td style="color:{{$png['Status']}}">{{$png['Status']}}</td>
-              <td>{{$png['Mean_IPK']}}</td>
-              <td>{{$png['nFailed']}}</td>
-              <td>{{$png['nBorderline']}}</td>
-              <td>{{$png['nStudents']}}</td>
+              <td style='text-align:center'>{{$png['Mean_IPK']}}</td>
+              <td style='text-align:center'>{{$png['nFailed']}}</td>
+              <td style='text-align:center'>{{$png['nBorderline']}}</td>
+              <td style='text-align:center'>{{$png['nStudents']}}</td>
             </tr>
             @endforeach
           </tbody>

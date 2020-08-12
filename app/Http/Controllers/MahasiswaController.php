@@ -420,14 +420,7 @@ class MahasiswaController extends Controller
         return view('prodi/ipkpbiprodi', ['mahasiswas' => $mahasiswa]);
     }
    
-<<<<<<< HEAD
-   
-=======
-  
-
->>>>>>> 70a7162fcfe0ee0803d386b765acd0ab157426ee
-
-
+    
     /**
      * Show the form for creating a new resource.
      *

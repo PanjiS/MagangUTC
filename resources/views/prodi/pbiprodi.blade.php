@@ -102,11 +102,7 @@
   </div>
 
   <div class="col-md-9">
-<<<<<<< HEAD
-    <h1 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Inggris</h1>
-=======
     <h1 style="text-align:center">Nilai Mata Kuliah Pendidikan Bahasa Ingrris</h1>
->>>>>>> 70a7162fcfe0ee0803d386b765acd0ab157426ee
     <br>
 
     <div class="row">
@@ -181,7 +177,7 @@
               <th scope="col" colspan="4">Min</th>
               @foreach($foot['min'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -189,7 +185,7 @@
               <th scope="col" colspan="4">Max</th>
               @foreach($foot['max'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -197,7 +193,7 @@
               <th scope="col" colspan="4">Median</th>
               @foreach($foot['median'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -205,7 +201,7 @@
               <th scope="col" colspan="4">Mean</th>
               @foreach($foot['avg'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -213,7 +209,7 @@
               <th scope="col" colspan="4">quartil 1</th>
               @foreach($foot['q1'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -221,7 +217,7 @@
               <th scope="col" colspan="4">quartil 3</th>
               @foreach($foot['q3'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -229,7 +225,7 @@
               <th scope="col" colspan="4">Standar Deviation</th>
               @foreach($foot['stdev'] as $f)
                 
-                <td scope="col" colspan="3">{{$f}}</td>
+                <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
@@ -238,15 +234,10 @@
     </div>
   </div>
 
-<<<<<<< HEAD
 <div class="d-flex justify-content-right">
 {!! $mahasiswas->appends(request()->query())->links() !!}
 </div>
-=======
-  <div class="d-flex justify-content-right">
-    {!! $mahasiswas->appends(request()->query())->links() !!}
-  </div>
->>>>>>> 70a7162fcfe0ee0803d386b765acd0ab157426ee
+
 </div>
 <div class="row">
   <div class="footer-copy green clearfix" style="width:101%">

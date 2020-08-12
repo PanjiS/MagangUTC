@@ -54,26 +54,6 @@
 <div class="col-md-3">
   <div class="accordion">                                    
     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-<<<<<<< HEAD
-          <div class="panel panel-default">
-            <div class="panel-heading active" role="tab" id="headingOne">
-              <h4 class="panel-title">
-                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
-                  Program Studi                                         
-                <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
-              </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
-              <div class="panel-body">
-                <ul>
-                <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
-                    <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan bahasa Inggris</a></li>
-                   
-
-                </ul>
-              </div>
-            </div>
-=======
       <div class="panel panel-default">
         <div class="panel-heading active" role="tab" id="headingOne">
           <h4 class="panel-title">
@@ -88,7 +68,6 @@
               <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
               <li><a href="{{ url('/prodi/pbiprodi') }}">Pendidikan bahasa Inggris</a></li>
             </ul>
->>>>>>> 70a7162fcfe0ee0803d386b765acd0ab157426ee
           </div>
         </div>
       </div>
@@ -115,7 +94,7 @@
 </div>
 </div>
 <div class="col-md-9">
-  <h2 style="text-align:center">Daftar Rekap Mata Kuliah</h2>
+  <h2 style="text-align:center">Daftar Rekap IPK Mata Kuliah</h2>
   <br>
   <div class="row">
     <form action="{{url('')}}/pengelola/pengelolamatkul" method="GET">
@@ -160,13 +139,13 @@
             <tr>
               <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
-              <td>{{$png['Course_Id']}}</td>
-              <td>{{$png['TermYear_Name']}}</td>
-              <td>{{$png['Min']}}</td>
-              <td>{{$png['Max']}}</td>
-              <td>{{$png['Median']}}</td>
-              <td>{{$png['Mean_IPK']}}</td>
-              <td>{{$png['Stdev']}}</td>
+              <td style='text-align:center'>{{$png['Course_Id']}}</td>
+              <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
+              <td style='text-align:center'>{{$png['Min']}}</td>
+              <td style='text-align:center'>{{$png['Max']}}</td>
+              <td style='text-align:center'>{{$png['Median']}}</td>
+              <td style='text-align:center'>{{$png['Mean_IPK']}}</td>
+              <td style='text-align:center'>{{$png['Stdev']}}</td>
             </tr>
             @endforeach
           </tbody> 
