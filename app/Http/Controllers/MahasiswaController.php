@@ -190,8 +190,8 @@ class MahasiswaController extends Controller
                 ->first();
             $foot['min'][$ii] = $nl->MIN_Weight;
             $foot['max'][$ii] = $nl->MAX_Weight;
-            $foot['avg'][$ii] = $nl->AVG_Weight;
-            $foot['stdev'][$ii] = $nl->STDEV_Weight;
+            $foot['avg'][$ii] = number_format($nl->AVG_Weight, 2, ',', '.');
+            $foot['stdev'][$ii] = number_format($nl->STDEV_Weight, 2, ',', '.');
 
             $md = DB::table('data_nilai')
                 
@@ -358,8 +358,8 @@ class MahasiswaController extends Controller
                 ->first();
             $foot['min'][$ii] = $nl->MIN_Weight;
             $foot['max'][$ii] = $nl->MAX_Weight;
-            $foot['avg'][$ii] = $nl->AVG_Weight;
-            $foot['stdev'][$ii] = $nl->STDEV_Weight;
+            $foot['avg'][$ii] = number_format($nl->AVG_Weight, 2, ',', '.');
+            $foot['stdev'][$ii] = number_format($nl->STDEV_Weight, 2, ',', '.');
 
             $md = DB::table('data_nilai')
                 
