@@ -139,11 +139,7 @@
             <tr>
               <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
-<<<<<<< HEAD
               <td style='text-align:center'>{{$png['Course_Id']}}</td>
-=======
-              <td>{{$png['Course_Id']}}</td>
->>>>>>> 294a91b0588a58b69b2ca77c484ffd5f6001264a
               <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
               <td style='text-align:center'>{{$png['Min']}}</td>
               <td style='text-align:center'>{{$png['Max']}}</td>
