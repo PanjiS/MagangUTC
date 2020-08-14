@@ -87,8 +87,10 @@ class PengelolaController extends Controller
       $pengelola = DB::table('data_nilai')
         ->leftJoin('hasil_rekap_matkul','hasil_rekap_matkul.Course_Id','=','data_nilai.Course_Id')
         ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','data_nilai.TermYear_Id')
-        ->select(DB::raw('data_nilai.Department_Id, data_nilai.Course_Id, data_nilai.TermYear_Id, master_term_year.TermYear_Name, MIN(Weight) AS MIN_Weight, MAX(Weight) AS MAX_Weight, AVG(CAST(Weight AS float)) AS AVG_Weight, STDEV(CAST(Weight AS float)) AS STDEV_Weight'))
-        ->groupBy('data_nilai.Department_Id', 'data_nilai.Course_Id', 'data_nilai.TermYear_Id', 'master_term_year.TermYear_Name');
+        ->leftJoin('master_matakuliah','master_matakuliah.Course_Id','=','data_nilai.Course_Id')
+        ->select(DB::raw('data_nilai.Department_Id, data_nilai.Course_Id, master_matakuliah.Course_Name, data_nilai.TermYear_Id, master_term_year.TermYear_Name, 
+          MIN(Weight) AS MIN_Weight, MAX(Weight) AS MAX_Weight, AVG(CAST(Weight AS float)) AS AVG_Weight, STDEV(CAST(Weight AS float)) AS STDEV_Weight'))
+        ->groupBy('data_nilai.Department_Id', 'data_nilai.Course_Id', 'master_matakuliah.Course_Name','data_nilai.TermYear_Id', 'master_term_year.TermYear_Name');
       if($request->thnsm != null)
       {
         
@@ -108,6 +110,7 @@ class PengelolaController extends Controller
       $data[$i]=[];
       $data[$i]['Department_Id']=$pn->Department_Id;
       $data[$i]['Course_Id']=$pn->Course_Id;
+      $data[$i]['Course_Name']=$pn->Course_Name;
       $data[$i]['TermYear_Name']=$pn->TermYear_Name;
       $data[$i]['Min']=$pn->MIN_Weight;
       $data[$i]['Max']=$pn->MAX_Weight;
