@@ -156,10 +156,7 @@
               <td style='text-align:center'>{{$png['nFailed']}}</td>
               <td style='text-align:center'>{{$png['nBorderline']}}</td>
               <td style='text-align:center'>{{$png['nStudents']}}</td>
-<<<<<<< HEAD
              
-=======
->>>>>>> 72c42a1fbeedd260c292a772950dfb2470088215
             </tr>
             @endforeach
           </tbody>
