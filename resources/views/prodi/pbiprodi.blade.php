@@ -178,7 +178,6 @@
               @foreach($foot['min'] as $f)
                 
                 <td scope="col" colspan="3" style='text-align:center'>{{$f}}</td>
-                <td scope="col" colspan="3 " style='text-align:center'>{{$f}}</td>
               
               @endforeach
           </tr>
