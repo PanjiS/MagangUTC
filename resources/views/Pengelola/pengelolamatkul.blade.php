@@ -144,7 +144,10 @@
               <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
               <td style='text-align:center'>{{$png['Course_Id']}}</td>
+<<<<<<< HEAD
               <td style='text-align:center'>{{$png['Course_Name']}}</td>
+=======
+>>>>>>> 72c42a1fbeedd260c292a772950dfb2470088215
               <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
               <td style='text-align:center'>{{$png['Min']}}</td>
               <td style='text-align:center'>{{$png['Max']}}</td>

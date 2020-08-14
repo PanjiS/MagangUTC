@@ -17,6 +17,7 @@ class PengelolaController extends Controller
       }
       $termyears=DB::table('master_term_year')->get();
       $departments=DB::table('master_prodi')->get();
+      
 
       $pengelola = DB::table('data_dosen_kelas')
         ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')

@@ -103,7 +103,7 @@
   <div class="row">
     <form action="{{url('')}}/pengelola/pengeloladosen" method="GET">
       <div class="col-md-2">Tahun Akademik</div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
           <select name="thnsm" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
             <option value="">Pilih Semester</option>
             @foreach($termyears as $trmy)
@@ -123,6 +123,8 @@
             </select>
           </div>
         </div>
+
+  
         
         <table class="table sortable" id="customers">
           <thead class="thead-white">
@@ -154,7 +156,10 @@
               <td style='text-align:center'>{{$png['nFailed']}}</td>
               <td style='text-align:center'>{{$png['nBorderline']}}</td>
               <td style='text-align:center'>{{$png['nStudents']}}</td>
+<<<<<<< HEAD
              
+=======
+>>>>>>> 72c42a1fbeedd260c292a772950dfb2470088215
             </tr>
             @endforeach
           </tbody>
