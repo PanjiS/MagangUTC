@@ -122,6 +122,16 @@
               @endforeach
             </select>
           </div>
+
+          <div class="col-md-1">Status</div>
+          <div class="form-group col-md-2">
+            <select name="dpt" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
+              <option value="">Pilih Status</option>
+              @foreach($data as $dprt)
+              <option value="{{$dprt->Status}}" <?php if($dpt==$dprt->Status){echo'selected';}?> >{{$dprt->status}}</option>
+              @endforeach
+            </select>
+          </div>
         </div>
 
   
@@ -129,7 +139,7 @@
         <table class="table sortable" id="customers">
           <thead class="thead-white">
             <tr>
-              <th scope="co1"  style='text-align:center'>No</th>
+          
               <th scope="co1"  style='text-align:center'>Department Id</th>
               <th scope="co1"  style='text-align:center' >Id Dosen</th>
               <th scope="co1"  style='text-align:center' data-defaultsign="AZ">Nama</th>
@@ -145,7 +155,7 @@
           <tbody>
             @foreach($data as $png)
             <tr>
-              <th scope="row" style='text-align:center'>{{$loop->iteration}}</th>
+            
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
               <td style='text-align:center'>{{$png['Lecture_Id']}}</td>
               <td>{{$png['Lecture_Name']}}</td>

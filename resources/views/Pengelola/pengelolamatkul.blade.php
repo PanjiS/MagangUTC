@@ -126,7 +126,7 @@
         <table class="table sortable" id="customers">
           <thead class="thead-white">
             <tr>
-              <th scope="col">No</th>
+              
               <th scope="col"  style='text-align:center'>Department_Id</th>
               <th scope="col"  style='text-align:center'data-defaultsign="AZ">Id MataKuliah</th>
               <th scope="col"  style='text-align:center'data-defaultsign="AZ">Nama MataKuliah</th>
@@ -141,7 +141,7 @@
           <tbody>
             @foreach($data as $png)
             <tr>
-              <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
+              
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
               <td style='text-align:center'>{{$png['Course_Id']}}</td>
               <td style='text-align:center'>{{$png['Course_Name']}}</td>
