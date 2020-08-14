@@ -100,7 +100,7 @@
   <div class="row">
     <form action="{{url('')}}/pengelola/pengeloladosen" method="GET">
       <div class="col-md-2">Tahun Akademik</div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
           <select name="thnsm" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
             <option value="">Pilih Semester</option>
             @foreach($termyears as $trmy)
@@ -120,6 +120,8 @@
             </select>
           </div>
         </div>
+
+  
         
         <table class="table" id="customers">
           <thead class="thead-white">
@@ -147,17 +149,10 @@
               <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
               <td style='text-align:center'>{{$png['Course_Id']}}</td>
               <td style="color:{{$png['Status']}}">{{$png['Status']}}</td>
-<<<<<<< HEAD
               <td style='text-align:center'>{{$png['Mean_IPK']}}</td>
               <td style='text-align:center'>{{$png['nFailed']}}</td>
               <td style='text-align:center'>{{$png['nBorderline']}}</td>
               <td style='text-align:center'>{{$png['nStudents']}}</td>
-=======
-              <td  style='text-align:center'>{{$png['Mean_IPK']}}</td>
-              <td  style='text-align:center'>{{$png['nFailed']}}</td>
-              <td  style='text-align:center'>{{$png['nBorderline']}}</td>
-              <td  style='text-align:center'>{{$png['nStudents']}}</td>
->>>>>>> 294a91b0588a58b69b2ca77c484ffd5f6001264a
             </tr>
             @endforeach
           </tbody>
