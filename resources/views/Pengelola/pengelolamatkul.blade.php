@@ -25,6 +25,9 @@
     <script src="{{url('')}}/js/bootstrap.min.js"></script>
     <script src="{{url('')}}/js/behavior.js"></script>
 
+    <link href="{{url('')}}/css/bootstrap-sortable.css" rel="stylesheet" type="text/css">
+    <script src="{{url('')}}/js/bootstrap-sortable.js"></script>
+
 
     <title>Data Analisis</title>
 </head>
@@ -120,12 +123,13 @@
           </div>
         </div>
         
-        <table class="table" id="customers">
+        <table class="table sortable" id="customers">
           <thead class="thead-white">
             <tr>
               <th scope="col">No</th>
               <th scope="col"  style='text-align:center'>Department_Id</th>
-              <th scope="col"  style='text-align:center'>Id MataKuliah</th>
+              <th scope="col"  style='text-align:center'data-defaultsign="AZ">Id MataKuliah</th>
+              <th scope="col"  style='text-align:center'data-defaultsign="AZ">Nama MataKuliah</th>
               <th scope="col"  style='text-align:center'>Tahun Ajaran</th>
               <th scope="col" style='text-align:center'>MIN</th>
               <th scope="col"  style='text-align:center'>MAX</th>
@@ -140,6 +144,7 @@
               <th scope="row"  style='text-align:center'>{{$loop->iteration}}</th>
               <td  style='text-align:center'>{{$png['Department_Id']}}</td>
               <td style='text-align:center'>{{$png['Course_Id']}}</td>
+              <td style='text-align:center'>{{$png['Course_Name']}}</td>
               <td style='text-align:center'>{{$png['TermYear_Name']}}</td>
               <td style='text-align:center'>{{$png['Min']}}</td>
               <td style='text-align:center'>{{$png['Max']}}</td>
@@ -172,6 +177,12 @@
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<!-- <script>
+  $(document).ready(function () {
+  $('#customers').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+});
+</script> -->
 
   </body>
 </html>
