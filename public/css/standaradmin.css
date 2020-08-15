@@ -10,7 +10,7 @@ body{
 	padding:0 0 0 0;
 	font:11px Verdana, Arial, Helvetica, sans-serif;
 	line-height:2em;
-	background:#e8e8ed url(../images/admin/bgbody.jpg) 0 0 repeat-x;
+	background:#e8e8ed  0 0 repeat-x;
 }
 
 img{
@@ -60,7 +60,7 @@ ol{
 }
 
 ul li{
-	background:url(../images/admin/li.gif) 0 8px no-repeat !important;
+	background:url 0 8px no-repeat !important;
 	padding:0 0 0 10px;
 	margin:0 0 0 0;
 }
