@@ -9,22 +9,21 @@
     <link rel="stylesheet" type="text/css" href="{{url('')}}/css/standaradmin.css" media="screen">
     <link rel="stylesheet" type="text/css" href="{{url('')}}/css/frameworkadmin.css" media="screen">
     <link rel="stylesheet" type="text/css" href="{{url('')}}/css/panel.css" media="screen">
-    <link rel="stylesheet" href="{{url('')}}/css/style.css">
-    <link rel="stylesheet" href="{{url('')}}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{url('')}}/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{url('')}}/dataTables/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url('')}}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{url('')}}/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url('')}}/dataTables/datatables.min.css">
 
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" src="{{url('')}}/js/commonui.js"></script>
     <script type="text/javascript" src="{{url('')}}/js/jquery.min.js"></script>
     <script type="text/javascript" src="{{url('')}}/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="{{url('')}}/js/jquery.js"></script>
-    <script src="{{url('')}}/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/js/jquery-1.11.3.min.js"></script>
 
-    <script src="{{url('')}}/dataTables/datatables.min.js"></script>
-    <script src="{{url('')}}/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="{{url('')}}/js/bootstrap.min.js"></script>
-    <script src="{{url('')}}/js/behavior.js"></script>
+    <script type="text/javascript" src="{{url('')}}/dataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/js/behavior.js"></script>
 
 
     <title>Analisis Mata Kuliah</title>
@@ -51,7 +50,7 @@
   <ul>
   <!-- <li> <a href="{{ url('/prodi/sipilprodi') }}">Rekap Mata Kuliah</a> </li> -->
     <!-- <li > <a href="{{ url('/prodi/ipksipilprodi') }}">Rekap IPK </a> </li> -->
-    <a href="{{ url('/home') }}">Home</a>    
+    <a href="{{ url('/home') }}" style='color:white;'>Home</a>    
   </ul>
 </div>
 
@@ -62,8 +61,8 @@
               <div class="panel-heading active" role="tab" id="headingOne">
                 <h4 class="panel-title">
                   <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style='color:white;' class="">                                        
-                    Program Studi                                   
-                  </a>
+                    Program Studi                                         
+                  <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
                 </h4>
               </div>
               <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
@@ -83,7 +82,7 @@
                 <h4 class="panel-title">
                   <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style='color:white;'>
                   Rekap Hasil 
-                  </a>
+                  <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
                 </h4>
               </div>
               <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
