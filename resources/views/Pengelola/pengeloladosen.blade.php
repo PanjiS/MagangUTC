@@ -8,9 +8,8 @@
     <link rel="stylesheet" type="text/css" href="/css/standaradmin.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/css/frameworkadmin.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/css/panel.css" media="screen">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 
     <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
     <script type="text/javascript" src="/js/commonui.js"></script>
@@ -19,15 +18,14 @@
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/jquery.dropdownPlain.js"></script>
 
-    <script src="/js/jquery-1.11.3.min.js"></script>
-    <script src="{{url('')}}/dataTables/datatables.min.js"></script>
-    <script src="/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/behavior.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="{{url('')}}/dataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/behavior.js"></script>
 
-    <!-- <script src="{{url('')}}//code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <link href="{{url('')}}/css/bootstrap-sortable.css" rel="stylesheet" type="text/css">
-    <script src="{{url('')}}/js/bootstrap-sortable.js"></script>
+    <script type="text/javascript" src="{{url('')}}/js/bootstrap-sortable.js"></script>
 
 
     <title>Data Analisis</title>
@@ -52,7 +50,7 @@
 
 <div class="nav">
   <ul>
-  <a href="{{ url('/home') }}">Home</a>  
+  <a href="{{ url('/home') }}" style='color:white;'>Home</a>  
   </ul>
 </div>
 <div class="col-md-3">
@@ -61,12 +59,12 @@
       <div class="panel panel-default">
         <div class="panel-heading active" role="tab" id="headingOne">
           <h4 class="panel-title">
-            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style='color:white;' class="">                                        
             Program Studi                                         
             <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
           </h4>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
           <div class="panel-body">
             <ul>
               <li><a href="{{ url('/prodi/sipilprodi') }}">Teknik Sipil</a></li>
@@ -78,7 +76,7 @@
       <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="headingTwo">
           <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style='color:white;'>
             Rekap Hasil
             <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
           </h4>
@@ -125,11 +123,11 @@
 
           <div class="col-md-1">Status</div>
           <div class="form-group col-md-2">
-            <select name="dpt" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
-              <option value="">Pilih Status</option>
-              @foreach($data as $dprt)
-              <option value="{{$dprt->Status}}" <?php if($dpt==$dprt->Status){echo'selected';}?> >{{$dprt->status}}</option>
-              @endforeach
+            <select name="status" data-column="1" class="form-control input-sm dynamic" data-dependent="state" onchange="this.form.submit()">
+              <option value="">Semua Status</option>
+              <option value="1" <?php if($status==1){echo'selected';}?> >Green</option>
+              <option value="2" <?php if($status==2){echo'selected';}?> >Orange</option>
+              <option value="3" <?php if($status==3){echo'selected';}?> >Red</option>
             </select>
           </div>
         </div>
@@ -193,67 +191,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-</script>
-<!-- <script>
-  $(document).ready(function () {
-  $('#customers').DataTable();
-  $('.dataTables_length').addClass('bs-select');
-});
-</script> -->
-<script>
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;table = document.getElementById("customers");
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = "asc"; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.getElementsByTagName("TR");
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == "desc") {
-if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again.*/
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
 </script>
 
   </body>

@@ -20,12 +20,12 @@ class PengelolaController extends Controller
       
 
       $pengelola = DB::table('data_dosen_kelas')
-        ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')
+        // ->leftJoin('hasil_rekap_dosen','hasil_rekap_dosen.datadosenkelas_Id','=','data_dosen_kelas.datadosenkelas_Id')
         ->leftJoin('master_term_year','master_term_year.TermYear_Id','=','data_dosen_kelas.TermYear_Id')
         ->leftJoin('master_dosen','master_dosen.Lecture_Id','=','data_dosen_kelas.Lecture_Id')
-        ->select('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 'hasil_rekap_dosen.Status', 
+        ->select('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 
         'data_dosen_kelas.datadosenkelas_Id','data_dosen_kelas.Class_Id','master_term_year.TermYear_Id')
-        ->groupBy('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 'hasil_rekap_dosen.Status', 'data_dosen_kelas.datadosenkelas_Id','data_dosen_kelas.Class_Id','master_term_year.TermYear_Id');
+        ->groupBy('data_dosen_kelas.Department_Id', 'master_dosen.Lecture_Id', 'master_dosen.Lecture_Name', 'master_term_year.TermYear_Name', 'data_dosen_kelas.Course_Id', 'data_dosen_kelas.datadosenkelas_Id','data_dosen_kelas.Class_Id','master_term_year.TermYear_Id');
 
       if($request->thnsm != null)
       {
@@ -34,6 +34,47 @@ class PengelolaController extends Controller
       if($request->dpt != null)
       {
         $pengelola = $pengelola->where('data_dosen_kelas.Department_Id','=',$request->dpt);
+      }
+      if($request->thnsm != null && $request->dpt != null && $request->status != null)
+      {
+        $allowed = [];
+        $a=0;
+        $pengelolaL = $pengelola->get();
+        // dd($pengelolaL);
+        if($request->status == 1){
+          foreach($pengelolaL as $pg)
+          {
+            $brdrl=count(DB::table('data_nilai')->where([['Class_Id',$pg->Class_Id],['TermYear_Id',$pg->TermYear_Id],['Department_Id',$pg->Department_Id],['Course_Id',$pg->Course_Id]])->where('Weight','>=',2.00)->get());;
+            $fl = count(DB::table('data_nilai')->where([['Class_Id',$pg->Class_Id],['TermYear_Id',$pg->TermYear_Id],['Department_Id',$pg->Department_Id],['Course_Id',$pg->Course_Id]])->where('Weight','<',2.00)->get());
+            if($brdrl > $fl){
+              $allowed[$a] = $pg->datadosenkelas_Id;
+              $a++;
+            }
+          }
+        }else if($request->status == 2){
+          foreach($pengelolaL as $pg)
+          {
+            $brdrl=count(DB::table('data_nilai')->where([['Class_Id',$pg->Class_Id],['TermYear_Id',$pg->TermYear_Id],['Department_Id',$pg->Department_Id],['Course_Id',$pg->Course_Id]])->where('Weight','>=',2.00)->get());;
+            $fl = count(DB::table('data_nilai')->where([['Class_Id',$pg->Class_Id],['TermYear_Id',$pg->TermYear_Id],['Department_Id',$pg->Department_Id],['Course_Id',$pg->Course_Id]])->where('Weight','<',2.00)->get());
+            if($brdrl == $fl){
+              $allowed[$a] = $pg->datadosenkelas_Id;
+              $a++;
+            }
+          }
+        }else if($request->status == 3){
+          foreach($pengelolaL as $pg)
+          {
+            $brdrl=count(DB::table('data_nilai')->where([['Class_Id',$pg->Class_Id],['TermYear_Id',$pg->TermYear_Id],['Department_Id',$pg->Department_Id],['Course_Id',$pg->Course_Id]])->where('Weight','>=',2.00)->get());;
+            $fl = count(DB::table('data_nilai')->where([['Class_Id',$pg->Class_Id],['TermYear_Id',$pg->TermYear_Id],['Department_Id',$pg->Department_Id],['Course_Id',$pg->Course_Id]])->where('Weight','<',2.00)->get());
+            if($brdrl < $fl){
+              $allowed[$a] = $pg->datadosenkelas_Id;
+              $a++;
+            }
+          }
+        }
+        // dd($allowed);
+        $pengelola = $pengelola->whereIn('datadosenkelas_Id',$allowed);
+        
       }
       $pengelola = $pengelola->simplePaginate($sort);
       // dd($pengelola);
@@ -72,7 +113,8 @@ class PengelolaController extends Controller
         ->with('thnsm',$request->thnsm)
         ->with('dpt',$request->dpt)
         ->with('departments',$departments)
-        ->with('termyears',$termyears);
+        ->with('termyears',$termyears)
+        ->with('status',$request->status);
     }
 
     public function getdatarekap_matkul(Request $request)
