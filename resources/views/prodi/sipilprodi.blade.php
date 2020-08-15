@@ -61,8 +61,8 @@
             <div class="panel panel-default">
               <div class="panel-heading active" role="tab" id="headingOne">
                 <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">                                        
-                    Program Studi                                         
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style='color:white;' class="">                                        
+                    Program Studi                                   
                   </a>
                 </h4>
               </div>
@@ -81,7 +81,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
-                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style='color:white;'>
                   Rekap Hasil 
                   </a>
                 </h4>
@@ -139,13 +139,19 @@
       <table class="table table-bordered table-hover" id="customers">
         <thead>
           <tr>
-              <th scope="col" rowspan='2'>No</th>
-              @foreach($head as $h)
+            <th scope="col" rowspan='2'>No</th>
+            @php
+              $d=0;
+            @endphp
+            @foreach($head as $h)
               @if(is_array($h))
-              <th scope="col" colspan='3' style='text-align:center'>{{$h[0]}}</th>
+              <th scope="col" colspan='3' style='text-align:center;border-right:2px solid black;'>{{$h[0]}}</th>
               @else
-              <th scope="col" rowspan='2'style='text-align:center'>{{$h}}</th>
+              <th scope="col" rowspan='2'style='text-align:center;<?php if($d==2){ echo "border-right:2px solid black;";} ?>'>{{$h}}</th>
               @endif
+              @php
+               $d++;
+              @endphp
             @endforeach
           </tr>
           <tr>
@@ -153,18 +159,25 @@
               @if(is_array($h))
               <th scope="col" style='text-align:center'>{{$h[1]}}</th>
               <th scope="col" style='text-align:center'>{{$h[2]}}</th>
-              <th scope="col" style='text-align:center'>{{$h[3]}}</th>
+              <th scope="col" style='text-align:center;border-right:2px solid black;'>{{$h[3]}}</th>
               
               @endif
             @endforeach
           </tr>
         </thead>
         <tbody>
+          
           @foreach($data as $mhs)
             <tr>
                 <th scope="row" style='text-align:center'>{{$loop->iteration}}</th>
+                @php
+                  $d=1;
+                @endphp
                 @foreach($mhs as $mh)
-                <td style='text-align:center'>{{$mh}}</td>
+                <td style='text-align:center; <?php if($d%3==0){ echo "border-right:2px solid black;";} ?>'>{{$mh}}</td>
+                @php
+                  $d++;
+                @endphp
                 @endforeach
                 
             </tr>
