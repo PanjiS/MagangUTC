@@ -26,7 +26,7 @@
 
     <link href="{{url('')}}/css/bootstrap-sortable.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="{{url('')}}/js/bootstrap-sortable.js"></script>
-
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <title>Data Analisis</title>
 </head>
@@ -128,7 +128,7 @@
               
               <th scope="col"  style='text-align:center'>Department_Id</th>
               <th scope="col"  style='text-align:center'data-defaultsign="AZ">Id MataKuliah</th>
-              <th scope="col"  style='text-align:center'data-defaultsign="AZ">Nama MataKuliah</th>
+              <th scope="col"  style='text-align:center'data-defaultsign="AZ">Nama MataKuliah <i class='fas fa-sort'></i></th>
               <th scope="col"  style='text-align:center'>Tahun Ajaran</th>
               <th scope="col" style='text-align:center'>MIN</th>
               <th scope="col"  style='text-align:center'>MAX</th>

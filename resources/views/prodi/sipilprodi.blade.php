@@ -24,6 +24,7 @@
     <script type="text/javascript" src="{{url('')}}/js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{url('')}}/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{url('')}}/js/behavior.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 
     <title>Analisis Mata Kuliah</title>

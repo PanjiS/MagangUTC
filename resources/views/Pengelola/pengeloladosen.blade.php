@@ -26,6 +26,7 @@
 
     <link href="{{url('')}}/css/bootstrap-sortable.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="{{url('')}}/js/bootstrap-sortable.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 
     <title>Data Analisis</title>
@@ -60,8 +61,8 @@
         <div class="panel-heading active" role="tab" id="headingOne">
           <h4 class="panel-title">
             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style='color:white;' class="">                                        
-            Program Studi                                         
-            <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
+            Program Studi 
+            <i class="glyphicon pull-right fa fa-chevron-up" style='margin-left: .3em'></i></a>
           </h4>
         </div>
         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
@@ -78,7 +79,7 @@
           <h4 class="panel-title">
             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style='color:white;'>
             Rekap Hasil
-            <i class="glyphicon fa fa-chevron-down pull-right"></i></a>
+            <i class="glyphicon pull-right fa fa-chevron-up"></i></a>
           </h4>
         </div>
         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
@@ -140,7 +141,7 @@
           
               <th scope="co1"  style='text-align:center'>Department Id</th>
               <th scope="co1"  style='text-align:center' >Id Dosen</th>
-              <th scope="co1"  style='text-align:center' data-defaultsign="AZ">Nama</th>
+              <th scope="co1"  style='text-align:center' data-defaultsign="AZ">Nama <i class='fas fa-sort'></i></th>
               <th scope="co1"  style='text-align:center'>Tahun Ajaran</th>
               <th scope="co1"  style='text-align:center'>Mata Kuliah</th>
               <th scope="co1" style='text-align:center'>Status</th>
