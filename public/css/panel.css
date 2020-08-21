@@ -1,0 +1,114 @@
+.TabbedPanels {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	clear: none;
+	width: 100%; /* IE Hack to force proper layout when preceded by a paragraph. (hasLayout Bug)*/
+}
+
+.TabbedPanelsTabGroup {
+	margin: 0px;
+	padding: 0px;
+}
+
+.TabbedPanelsTabGroup li {
+	background : none!important;
+}
+
+
+.TabbedPanelsTab {
+	position: relative;
+	top: 1px;
+	float: left;
+	padding: 5px 8px;
+	margin: 0px -1px 0px 0px;
+	font: bold 0.7em sans-serif;
+	background: #eee;
+	list-style: none;
+	color:#888;
+	border-left: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+	font-size:11px;
+}
+
+.TabbedPanelsTabHover {
+	background-color: #f2f2f2;
+	color:#aaa;
+}
+
+.TabbedPanelsTabSelected {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+	color:#000;
+}
+
+.TabbedPanelsTab a {
+	color: #2f6bc2;
+	text-decoration: none;
+}
+
+.TabbedPanelsContentGroup {
+	clear: both;
+	border-left: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #ccc;
+	border-right: solid 1px #ccc;
+	float:left;
+	background:#fff;
+	width:100%;
+}
+
+.TabbedPanelsContent {
+	padding: 6px 8px;
+}
+
+.TabbedPanelsContent ul.list1{
+	margin:0 0 0 0;
+	padding:0;
+	clear:both;
+}
+
+
+.VTabbedPanels .TabbedPanelsTabGroup {
+	float: left;
+	width: 10em;
+	height: 20em;
+	background-color: #EEE;
+	position: relative;
+	border-top: solid 1px #999;
+	border-right: solid 1px #999;
+	border-left: solid 1px #CCC;
+	border-bottom: solid 1px #CCC;
+}
+
+.VTabbedPanels .TabbedPanelsTab {
+	float: none;
+	margin: 0px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.VTabbedPanels .TabbedPanelsTabSelected {
+	background-color: #EEE;
+	border-bottom: solid 1px #999;
+}
+
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 30em;
+	height: 20em;
+}
+
+.fill{
+	background : none; 
+	border:none;
+	border-bottom : 1px dashed #ccc;
+}	

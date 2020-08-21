@@ -1,0 +1,355 @@
+#header{
+	float:left;
+	display:inline;
+	width:100%;
+	margin:0 0 0 0;
+	color:#fff;
+}
+
+#header a{
+	color:#ff0;
+}
+
+#header h1{
+	width:370px;
+	height:62px;
+	float:left;
+	display:inline;
+	margin:15px;
+	font-size:20px;
+	background:url(../images/admin/logo.gif) no-repeat;
+	text-indent:-9999px;
+}
+
+#header h1.h1_hassub{
+	padding-right:10px;
+	border-right:1px solid #fff;
+}
+
+#header span.h1_hassub{
+	padding-top:35px;
+	display:block;
+	font-size:16px;
+}
+
+
+#header p{
+	float:right;
+	display:inline;
+	margin:37px 17px 0 0;
+}
+
+#header .light{
+	color:#00cc00;
+	font-weight:bold;
+}
+
+.contentwrapper{
+	float:left;
+	display:inline;
+}
+
+.contentwrapper01{
+	width:23%;
+	margin:0 1%;
+}
+
+.contentwrapper01 .content{
+	width:94%;
+	padding:0 3%;
+	
+}
+
+.contentwrapper02{
+	float:left;
+	display:inline;
+	width:20%;
+	margin:0 0 0 1%;
+}
+
+.contentwrapper03{
+	float:right;
+	display:inline;
+	width:77%;
+	margin:0 1% 0 0;
+}
+
+.contentwrapper04{
+	width:98%;
+	margin:0 0 0 1%;
+}
+
+.content{
+	clear:both;
+	width:98%;
+	padding:1%;
+	margin:0 0 1% 0;
+	float:left;
+	display:inline;
+	background:#fff;
+	border:1px solid #bbb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+	background:#eee;
+	padding:1%;
+	width:98%;
+	clear:both;
+	margin:15px 0 0 0;
+}
+
+.warning{
+	background:#ffe8e8 !important;
+	width:98%;
+	border:1px solid #efbaba !important;
+	padding:1%;
+	float:left;
+}
+
+.warning ul{
+	margin:0;
+}
+
+
+ul.dropdown                         { position: relative;border-bottom: 1px solid #bdd6df;float:left;width:100%;background:url(../images/admin/bgtab01.gif) repeat-x !important; }
+ul.dropdown li                      { font-weight: bold; float: left; padding:0 !important; border-right: 1px solid #ccc;margin:0;background:url(../images/admin/bgtab01.gif) repeat-x !important; }
+ul.dropdown li a                    { display: block; padding: 2px 8px; }
+ul.dropdown li a:hover				{ background:#fff; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { position: relative; }
+ul.dropdown li.hover a              { color: black; }
+
+ul.dropdown ul 						{ width: 320px; visibility: hidden; position: absolute; top: 100%; left: 0; padding:0; border:1px solid #ccc; }
+ul.dropdown ul li 					{ font-weight: normal; background: #fff !important; color: #000; margin:0;
+									  border-bottom:none; border-right:none; float: none;padding:0 !important; }
+									  
+                                   /* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a					{ display: inline-block; width:96%; padding:2%; }  
+ul.dropdown ul li a:hover			{ background:#eee; text-decoration:none; }  
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul 					{ left: 100%; top: 0; }
+ul.dropdown li:hover > ul 			{ visibility: visible; }
+
+.enroute td{
+	background:#feffa0;
+}
+
+.paging{
+	float:right;
+	display:inline;
+	border-top:1px solid #aaa;
+	border-right:1px solid #aaa;
+	margin:5px 0 0 0;
+}
+
+.paging span, .paging a{
+	float:left;
+	display:inline;
+	border-bottom:1px solid #aaa;
+	border-left:1px solid #aaa;
+	width:20px;
+	text-align:center;
+}
+
+.paging a{
+	background:#eee;
+}
+
+.paging a:hover{
+	background:#d0d0d0;
+}
+
+
+
+
+
+
+
+
+
+
+ul.MenuBarVertical{
+	padding:0;
+	margin:0 0 15px 0 !important;
+	clear:both;
+	background:#1e6ca1;
+}
+
+ul.MenuBarVertical li{
+	margin:0;
+	line-height:12px !important;
+	text-align:left;
+	background:none!important;
+	padding:0;
+	width:100%;
+	font-weight:bold;
+	border-top:1px solid #4284B2;
+	background : #233124;
+}
+
+ul.MenuBarVertical li a{
+	background:none;
+}
+
+ul.MenuBarVertical li ul{
+	padding:0;
+	margin:0;
+	background:#57A7D8;
+}
+
+ul.MenuBarVertical li ul li {
+	border: none;
+	display: block;
+	margin: 0;
+	padding:0;
+	font-weight:lighter !important;
+}
+
+ul.MenuBarVertical li ul li a{
+	background: url(../images/layout/arrow02.gif) 7px 9px no-repeat !important;
+	margin:0;
+	padding:6px 2% 6px 15px;
+	line-height:normal !important;
+}
+
+ul.MenuBarVertical li ul li a:hover{
+	width:92%;
+}
+
+ul.MenuBarVertical li h3{
+	display:block;
+	color:#fff !important;
+	background:#024069 url(../images/layout/navhead_h3.gif) repeat-x !important;
+	width:92%;
+	height:92%;
+	padding:4%;
+	text-transform:uppercase;
+}
+
+ul.MenuBarVertical li a{
+	display:block;
+	color:#fff !important;
+	width:92%;
+	height:92%;
+	padding:4%;
+}
+
+ul.MenuBarVertical li a submenuactive{
+	background:#7a609c;
+}
+
+ul.MenuBarVertical li a span{
+	display:block;
+}
+
+ul.MenuBarVertical ul li a {
+	display:block;
+}
+
+ul.MenuBarVertical li a:hover{
+	background-color:#135581 !important;
+	color:#ddd !important;
+	text-decoration:none;
+	width:92%;
+}
+
+#menukiri{
+	MARGIN: 0 0px; 
+	WIDTH: 100%; 
+	HEIGHT: 300px;
+	
+}
+
+#menukiri ul li{
+	WIDTH: 100%;
+	background:#fff !important;
+}
+
+#menukiri ul li a{
+	padding-left: 10px;
+	
+}
+
+#menukiri UL UL LI {
+	PADDING-BOTTOM: 0px; 
+	PADDING-LEFT: 0px; 
+	WIDTH: 100%; 
+	PADDING-RIGHT: 0px; 
+	MARGIN-BOTTOM: 0px; 
+	PADDING-TOP: 0px
+}
+#menukiri UL UL LI A {
+	PADDING-BOTTOM: 3px; 
+	PADDING-LEFT: 6px; 
+	PADDING-RIGHT: 6px; 
+	DISPLAY: block; 
+	COLOR: #000; 
+	PADDING-TOP: 3px;
+}
+#menukiri UL UL LI A:hover {
+	PADDING-BOTTOM: 3px; 
+	BACKGROUND-COLOR: #eee; 
+	DISPLAY: block; 
+	COLOR: #369; 
+}
+#menukiri li{
+	list-style-type: none;
+	background:none !important;
+	padding:0 !important;
+	margin:0 !important;
+	
+}
+
+#menukiri li a{
+	color : #000;
+}
+
+#menukiri H3.head A {
+	PADDING-BOTTOM: 3px; 
+	PADDING-LEFT: 6px; 
+	PADDING-RIGHT: 6px; 
+	DISPLAY: block; 
+	BACKGROUND: url(down.gif) #80aac0 no-repeat 98% 50%; 
+	COLOR: #fff; 
+}
+#menukiri H3.head A:hover {
+	BACKGROUND: url(down.gif) #69c no-repeat 98% 50%; 
+	COLOR: #fff !important;
+}
+#menukiri H3.selected A {
+	PADDING-BOTTOM: 3px; 
+	PADDING-LEFT: 6px; 
+	PADDING-RIGHT: 6px; 
+	BACKGROUND: url(up.gif) #69c no-repeat 98% 50%; 
+	COLOR: #fff; 
+	PADDING-TOP: 3px
+}
+#menukiri H3.selected A:hover {
+	BACKGROUND: url(up.gif) #69c no-repeat 98% 50%; 
+	COLOR: #36a
+}
+
+
+.modalProgressGreyBackground 
+{
+    background: black;
+    opacity: 0.5;
+}
